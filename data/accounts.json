@@ -1,0 +1,9 @@
+{
+ "accounts": [
+  {
+   "slug": "kiwoom-mock",
+   "label": "키움_해외가상투자",
+   "file": "data/kiwoom-mock.json"
+  }
+ ]
+}

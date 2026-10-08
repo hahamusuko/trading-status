@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>무한매수법 운용 현황</title>
+<!--
+  무한매수법 자동매매 — 증권사별 운용 현황 (보기 전용 공개 페이지)
+  원본: infinite-buying-bot 저장소 auto_trading/status_site_template/index.html
+  데이터: data/accounts.json 목록 + data/<계좌>.json (각 자동매매 프로그램이 status_publisher.py로 올림)
+-->
+<style>
+  :root {
+    --bg: #f5f6f8; --card: #ffffff; --ink: #1b1f24; --muted: #667080; --line: #e3e6eb;
+    --accent: #2f6fde; --up: #d6453d; --down: #2f6fde; --ok: #1f8a4c; --warn: #c27a00; --bad: #c9302c;
+    --chip: #eef1f5; --bar: #2f6fde; --bar-bg: #e6eaf0; --buy: #d6453d; --sell: #2f6fde;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111418; --card: #1a1e24; --ink: #e8eaed; --muted: #9aa3ae; --line: #2a3038;
+      --accent: #6ea2ff; --up: #ff6b62; --down: #6ea2ff; --ok: #4cc27f; --warn: #f0b24a; --bad: #ff6b62;
+      --chip: #242a32; --bar: #6ea2ff; --bar-bg: #2a3038; --buy: #ff6b62; --sell: #6ea2ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+         -webkit-text-size-adjust: 100%; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
+  header.top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; margin-bottom: 12px; }
+  h1 { font-size: 20px; margin: 0; }
+  .sub { color: var(--muted); font-size: 12px; }
+  button.refresh { margin-left: auto; border: 1px solid var(--line); background: var(--card); color: var(--ink);
+                   border-radius: 8px; padding: 6px 12px; font-size: 13px; cursor: pointer; }
+  nav.accounts { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 14px; position: sticky; top: 0;
+                 background: var(--bg); padding: 8px 0; z-index: 2; }
+  nav.accounts a { text-decoration: none; color: var(--ink); background: var(--chip); border-radius: 999px;
+                   padding: 4px 12px; font-size: 13px; white-space: nowrap; }
+  section.account { margin-bottom: 28px; scroll-margin-top: 52px; }
+  .acct-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .acct-head h2 { font-size: 18px; margin: 0; }
+  .badge { display: inline-block; border-radius: 6px; padding: 1px 8px; font-size: 12px; font-weight: 600; }
+  .b-mock { background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent); }
+  .b-real { background: color-mix(in srgb, var(--bad) 15%, transparent); color: var(--bad); }
+  .b-ok { background: color-mix(in srgb, var(--ok) 15%, transparent); color: var(--ok); }
+  .b-warn { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn); }
+  .b-bad { background: color-mix(in srgb, var(--bad) 15%, transparent); color: var(--bad); }
+  .b-chip { background: var(--chip); color: var(--ink); font-weight: 500; }
+  .grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); margin-bottom: 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; min-width: 0; }
+  .kpi .l { color: var(--muted); font-size: 12px; }
+  .kpi .v { font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  .kpi .s { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .row2 { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 12px; }
+  .card h3 { font-size: 14px; margin: 0 0 8px; }
+  dl.kv { display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; margin: 0; font-size: 13px; }
+  dl.kv dt { color: var(--muted); }
+  dl.kv dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+  .tickers { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); }
+  .t-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 6px; }
+  .t-head .name { font-size: 18px; font-weight: 800; }
+  .tbar { height: 8px; background: var(--bar-bg); border-radius: 99px; overflow: hidden; margin: 4px 0 2px; }
+  .tbar > i { display: block; height: 100%; background: var(--bar); border-radius: 99px; }
+  .tline { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .spark { width: 100%; height: 70px; display: block; margin: 6px 0 2px; }
+  .legend { font-size: 11px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .legend i { display: inline-block; width: 10px; height: 2px; vertical-align: middle; margin-right: 3px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  th, td { padding: 4px 4px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+  th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+  th { color: var(--muted); font-weight: 500; font-size: 12px; }
+  td.kind { white-space: normal; }
+  .buy { color: var(--buy); font-weight: 600; } .sell { color: var(--sell); font-weight: 600; }
+  .up { color: var(--up); } .down { color: var(--down); }
+  .note { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  .alert { border-radius: 10px; padding: 8px 12px; margin-bottom: 10px; font-size: 13px; }
+  .alert.warn { background: color-mix(in srgb, var(--warn) 14%, transparent); }
+  .alert.bad { background: color-mix(in srgb, var(--bad) 14%, transparent); }
+  .scroll { overflow-x: auto; }
+  footer { color: var(--muted); font-size: 12px; margin-top: 24px; }
+  .empty { color: var(--muted); padding: 40px 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>무한매수법 운용 현황</h1>
+    <span class="sub" id="loaded">불러오는 중…</span>
+    <button class="refresh" onclick="load()">새로고침</button>
+  </header>
+  <nav class="accounts" id="nav"></nav>
+  <main id="main"><div class="empty">불러오는 중…</div></main>
+  <footer>
+    보기 전용 페이지입니다. 주문·설정 변경은 할 수 없습니다. 값은 각 자동매매 프로그램이 주문 제출·체결 반영·18:00 미리보기 때 올린 스냅샷이며,
+    평가금액·손익은 최근 종가 기준입니다(실시간 시세 아님).
+  </footer>
+</div>
+<script>
+const $ = (s, r = document) => r.querySelector(s);
+const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num = v => (v === null || v === undefined || Number.isNaN(Number(v))) ? null : Number(v);
+const usd = (v, d = 2) => num(v) === null ? '-' : (num(v) < 0 ? '-$' : '$') + Math.abs(num(v)).toLocaleString('en-US', {minimumFractionDigits: d, maximumFractionDigits: d});
+const px = v => num(v) === null ? '-' : (num(v) < 1 ? num(v).toFixed(4) : num(v).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+const pct = (v, d = 1) => num(v) === null ? '-' : `${num(v) > 0 ? '+' : ''}${num(v).toFixed(d)}%`;
+const sgn = v => num(v) === null ? '' : (num(v) > 0 ? 'up' : (num(v) < 0 ? 'down' : ''));
+const qty = v => num(v) === null ? '-' : Number(num(v).toFixed(4)).toLocaleString('en-US');
+
+function kpi(label, value, sub = '', cls = '') {
+  return `<div class="card kpi"><div class="l">${esc(label)}</div><div class="v ${cls}">${value}</div>${sub ? `<div class="s">${sub}</div>` : ''}</div>`;
+}
+
+function ageText(iso) {
+  const t = Date.parse(iso);
+  if (!t) return {text: '', cls: 'b-chip'};
+  const h = (Date.now() - t) / 3.6e6;
+  const text = h < 1 ? `${Math.max(1, Math.round(h * 60))}분 전` : (h < 48 ? `${Math.round(h)}시간 전` : `${Math.round(h / 24)}일 전`);
+  // 평일엔 하루 3번 이상 갱신 → 30시간 넘으면 주의, 3일 넘으면 경고 (주말 고려)
+  return {text, cls: h > 72 ? 'b-bad' : (h > 30 ? 'b-warn' : 'b-ok')};
+}
+
+function spark(t) {
+  const c = (t.recent_closes || []).filter(v => num(v) !== null);
+  if (c.length < 2) return '<div class="note">종가 기록이 2일 이상 쌓이면 그래프가 표시됩니다.</div>';
+  const refs = [['평단', t.avg_price, 'var(--ok)'], ['별지점', t.star_point, 'var(--warn)']]
+    .filter(r => num(r[1]) && t.qty > 0);
+  const vals = c.concat(refs.map(r => num(r[1])));
+  const lo = Math.min(...vals), hi = Math.max(...vals), pad = (hi - lo) * 0.08 || 1;
+  const W = 300, H = 70, y = v => H - ((v - lo + pad) / (hi - lo + 2 * pad)) * H, x = i => (i / (c.length - 1)) * W;
+  const path = c.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join('');
+  const lines = refs.map(r => `<line x1="0" x2="${W}" y1="${y(num(r[1])).toFixed(1)}" y2="${y(num(r[1])).toFixed(1)}" stroke="${r[2]}" stroke-width="1.2" stroke-dasharray="4 3"/>`).join('');
+  const last = c[c.length - 1];
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="최근 ${c.length}일 종가">
+      ${lines}<path d="${path}" fill="none" stroke="var(--accent)" stroke-width="1.8" vector-effect="non-scaling-stroke"/>
+      <circle cx="${W}" cy="${y(last).toFixed(1)}" r="2.5" fill="var(--accent)"/></svg>
+    <div class="legend"><span><i style="background:var(--accent)"></i>종가 ${c.length}일 (${px(Math.min(...c))} ~ ${px(Math.max(...c))})</span>
+      ${refs.map(r => `<span><i style="background:${r[2]}"></i>${r[0]} ${px(r[1])}</span>`).join('')}</div>`;
+}
+
+function ordersTable(orders) {
+  if (!orders || !orders.length) return '<div class="note">예정된 주문이 없습니다.</div>';
+  const rows = orders.map(o => `<tr>
+      <td class="${o.side}">${o.side === 'buy' ? '매수' : '매도'}</td>
+      <td class="kind">${esc(o.label || o.tag)}</td>
+      <td>${o.order_type && o.order_type.startsWith('MOC') ? '종가' : px(o.price)}</td>
+      <td>${qty(o.qty)}</td>
+      <td>${o.amount ? usd(o.amount) : '-'}</td></tr>`).join('');
+  const buySum = orders.filter(o => o.side === 'buy').reduce((s, o) => s + (o.amount || 0), 0);
+  return `<div class="scroll"><table><thead><tr><th>구분</th><th>종류</th><th>가격</th><th>수량</th><th>금액</th></tr></thead>
+    <tbody>${rows}</tbody></table></div>
+    <div class="note">매수 주문 합계 ${usd(buySum)} — 폭락장 대비 추가 매수는 종가가 그 가격 이하일 때만 체결되며, 어떤 종가에서도 하루치 매수금을 넘지 않습니다.</div>`;
+}
+
+function tickerCard(name, t) {
+  const div = num(t.division) || 0, T = num(t.T) || 0;
+  const tPct = div ? Math.min(100, T / div * 100) : 0;
+  const modeChip = t.mode === 'general' ? `<span class="badge b-chip">${esc(t.phase)}</span>` : `<span class="badge b-bad">리버스모드</span>`;
+  const halted = t.buy_halted ? '<div class="alert bad">매수 중단 상태 (T값 이상 감지) — 매도만 진행됩니다.</div>' : '';
+  return `<div class="card">
+    <div class="t-head"><span class="name">${esc(name)}</span>
+      <span class="badge b-chip">${esc(String(t.version || '').toUpperCase())}</span>
+      <span class="badge b-chip">목표 ${esc(t.target_profit_pct)}%</span>
+      <span class="badge b-chip">${esc(div)}분할</span>${modeChip}
+      ${t.cycles ? `<span class="badge b-chip">사이클 ${esc(t.cycles + 1)}회차</span>` : ''}</div>
+    ${halted}
+    <div class="tbar"><i style="width:${tPct.toFixed(1)}%"></i></div>
+    <div class="tline"><span>T = ${T.toFixed(2)} / ${div}</span><span>매수 진행 ${tPct.toFixed(1)}%</span></div>
+    ${spark(t)}
+    <dl class="kv">
+      <dt>보유수량</dt><dd>${qty(t.qty)}주</dd>
+      <dt>평균단가</dt><dd>${t.qty > 0 ? usd(t.avg_price) : '-'}</dd>
+      <dt>최근 종가</dt><dd>${usd(t.last_close)}</dd>
+      <dt>평가손익 (종가 기준)</dt><dd class="${sgn(t.unrealized_pl)}">${usd(t.unrealized_pl)} (${pct(t.unrealized_pl_pct, 2)})</dd>
+      <dt>매입금액 / 평가금액</dt><dd>${usd(t.book_value)} / ${usd(t.eval_value)}</dd>
+      <dt>${t.mode === 'general' ? '별% / 별지점' : '별지점 (5일 평균)'}</dt><dd>${t.star_pct !== null && t.star_pct !== undefined ? pct(t.star_pct, 2) + ' / ' : ''}${usd(t.star_point)}</dd>
+      <dt>지정가 매도 목표</dt><dd>${t.fixed_sell_price ? usd(t.fixed_sell_price) + ` (+${esc(t.target_profit_pct)}%)` : '-'}</dd>
+      <dt>1회 매수금</dt><dd>${usd(t.one_buy_amount)}</dd>
+      <dt>잔금 (현금)</dt><dd>${usd(t.cash)}</dd>
+      <dt>원금 / 진행율</dt><dd>${usd(t.principal)} / ${num(t.progress_pct) === null ? '-' : t.progress_pct + '%'}</dd>
+    </dl>
+    <h3 style="margin-top:12px">다음 주문 계획</h3>
+    ${ordersTable(t.orders)}
+    ${t.preview_note ? `<div class="note">${esc(t.preview_note)}</div>` : ''}
+  </div>`;
+}
+
+function accountSection(a) {
+  const tk = a.tickers || {};
+  const names = Object.keys(tk);
+  const sum = k => names.reduce((s, n) => s + (num(tk[n][k]) || 0), 0);
+  const principal = sum('principal'), cash = sum('cash'), book = sum('book_value'), evalv = sum('eval_value');
+  const total = cash + evalv, pl = evalv - book, plPct = book ? pl / book * 100 : null;
+  const ret = principal ? (total - principal) / principal * 100 : null;
+  const age = ageText(a.updated_at_iso);
+  const isMock = String(a.mode || '').includes('모의');
+  const s = a.schedule || {}, r = a.reconciliation, snap = a.account_snapshot;
+  let recon = '<div class="note">아직 점검 기록이 없습니다.</div>';
+  if (r) {
+    const tol = Math.max(5, (num(r.local_total_cash) || 0) * 0.01), bad = Math.abs(num(r.diff) || 0) > tol;
+    recon = `<dl class="kv"><dt>점검일</dt><dd>${esc(r.checked_at)}</dd>
+      <dt>실제 예수금 (USD)</dt><dd>${usd(r.real_usd_cash)}</dd><dt>프로그램 계산 현금</dt><dd>${usd(r.local_total_cash)}</dd>
+      <dt>차이</dt><dd><span class="badge ${bad ? 'b-bad' : 'b-ok'}">${usd(r.diff)} ${bad ? '확인 필요' : '정상'}</span></dd></dl>`;
+  }
+  const snapHtml = snap && (snap.monthly_pl_usd || snap.yearly_pl_usd || snap.usd_krw_rate)
+    ? `<dl class="kv"><dt>이번 달 실현손익</dt><dd class="${sgn(snap.monthly_pl_usd)}">${usd(snap.monthly_pl_usd)}</dd>
+       <dt>올해 실현손익</dt><dd class="${sgn(snap.yearly_pl_usd)}">${usd(snap.yearly_pl_usd)}</dd>
+       <dt>환율 (USD/KRW)</dt><dd>${snap.usd_krw_rate ? Number(snap.usd_krw_rate).toLocaleString() + '원' : '-'}</dd>
+       <dt>조회일</dt><dd>${esc(snap.snapshot_at)}</dd></dl>`
+    : `<div class="note">${isMock ? '모의투자 서버는 실현손익·환율 조회를 제공하지 않습니다.' : '아직 조회 기록이 없습니다.'}</div>`;
+  const pending = (a.pending_orders || []);
+  const pendingHtml = pending.length
+    ? `<div class="scroll"><table><thead><tr><th>종목</th><th>종류</th><th>가격</th><th>수량</th></tr></thead><tbody>${pending.map(p =>
+        `<tr><td>${esc(p.ticker)} <span class="${p.side}">${p.side === 'buy' ? '매수' : '매도'}</span></td><td class="kind">${esc(p.tag)}</td><td>${p.order_type && p.order_type.startsWith('MOC') ? '종가' : px(p.price)}</td><td>${qty(p.qty)}</td></tr>`).join('')}</tbody></table></div>`
+    : '<div class="note">체결 확인을 기다리는 주문이 없습니다.</div>';
+  return `<section class="account" id="acct-${esc(a.slug)}">
+    <div class="acct-head"><h2>[${esc(a.label)}]</h2>
+      <span class="badge ${isMock ? 'b-mock' : 'b-real'}">${esc(a.mode || '-')}</span>
+      <span class="badge ${age.cls}">갱신 ${esc(a.updated_at)} KST · ${age.text}</span></div>
+    ${age.cls === 'b-bad' ? '<div class="alert bad">데이터가 오래됐습니다. 자동매매 프로그램이 멈췄는지 확인해 주세요.</div>' : ''}
+    <div class="grid">
+      ${kpi('총 원금', usd(principal))}
+      ${kpi('총 평가금액', usd(total), `원금 대비 <span class="${sgn(ret)}">${pct(ret, 2)}</span>`)}
+      ${kpi('평가손익', usd(pl), `<span class="${sgn(pl)}">${pct(plPct, 2)}</span> (매입금액 대비)`, sgn(pl))}
+      ${kpi('현금 (잔금 합계)', usd(cash))}
+      ${kpi('매입금액', usd(book), `원금의 ${principal ? (book / principal * 100).toFixed(1) : '-'}% 투입`)}
+      ${kpi('다음 매수 주문 합계', usd(a.totals && a.totals.today_buy_attempt), '체결 여부와 무관한 최대치')}
+    </div>
+    <div class="row2">
+      <div class="card"><h3>일정 (한국시간)</h3><dl class="kv">
+        <dt>마지막 주문 제출</dt><dd>${esc(s.last_run_date || '-')}</dd>
+        <dt>마지막 체결 반영</dt><dd>${esc(s.last_reconcile_date || '-')}</dd>
+        <dt>다음 주문 제출</dt><dd>${esc(s.next_daily_run || '-')}</dd>
+        <dt>다음 체결 반영</dt><dd>${esc(s.next_reconcile_run || '-')}</dd>
+        <dt>다음 미리보기 알림</dt><dd>${esc(s.next_preview_run || '-')}</dd></dl></div>
+      <div class="card"><h3>계좌 현금 점검</h3>${recon}</div>
+      <div class="card"><h3>실현손익 · 환율</h3>${snapHtml}</div>
+    </div>
+    <div class="tickers">${names.map(n => tickerCard(n, tk[n])).join('')}</div>
+    <div class="card" style="margin-top:12px"><h3>체결 확인 대기 주문</h3>${pendingHtml}</div>
+  </section>`;
+}
+
+async function getJSON(url) {
+  const res = await fetch(`${url}?t=${Date.now()}`, {cache: 'no-store'});
+  if (!res.ok) throw new Error(`${url}: ${res.status}`);
+  return res.json();
+}
+
+async function load() {
+  $('#loaded').textContent = '불러오는 중…';
+  try {
+    const idx = await getJSON('data/accounts.json');
+    const accounts = await Promise.all((idx.accounts || []).map(a => getJSON(a.file).catch(e => ({label: a.label, slug: a.slug, error: String(e)}))));
+    $('#nav').innerHTML = accounts.length > 1 ? accounts.map(a => `<a href="#acct-${esc(a.slug)}">${esc(a.label)}</a>`).join('') : '';
+    $('#main').innerHTML = accounts.length
+      ? accounts.map(a => a.error ? `<section class="account"><h2>[${esc(a.label)}]</h2><div class="alert bad">데이터를 불러오지 못했습니다: ${esc(a.error)}</div></section>` : accountSection(a)).join('')
+      : '<div class="empty">아직 올라온 계좌 데이터가 없습니다.</div>';
+    $('#loaded').textContent = `${accounts.length}개 계좌 · ${new Date().toLocaleString('ko-KR')} 불러옴`;
+  } catch (e) {
+    $('#main').innerHTML = `<div class="alert bad">데이터를 불러오지 못했습니다: ${esc(e.message)}</div>`;
+    $('#loaded').textContent = '';
+  }
+}
+load();
+setInterval(load, 5 * 60 * 1000);
+</script>
+</body>
+</html>

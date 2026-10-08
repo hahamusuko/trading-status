@@ -1,0 +1,288 @@
+{
+ "schema": 1,
+ "label": "키움_해외가상투자",
+ "slug": "kiwoom-mock",
+ "mode": "모의투자",
+ "updated_at": "2026-10-08 19:55:47",
+ "updated_at_iso": "2026-10-08T19:55:47.520968+09:00",
+ "now_ny": "2026-10-08 06:55:47 EDT",
+ "schedule": {
+  "last_run_date": "2026-10-08",
+  "last_reconcile_date": "2026-10-08",
+  "next_daily_run": null,
+  "next_reconcile_run": null,
+  "next_preview_run": null
+ },
+ "totals": {
+  "principal": 100223.73,
+  "cash": 89221.48,
+  "book_value": 11002.25,
+  "total_value": 100223.73,
+  "unrealized_pl": 447.18,
+  "principal_usage_pct": 11.0,
+  "today_buy_attempt": 3352.07
+ },
+ "reconciliation": {
+  "checked_at": "2026-10-08",
+  "real_usd_cash": 91260.98,
+  "local_total_cash": 90348.83,
+  "diff": 912.16
+ },
+ "account_snapshot": {
+  "monthly_pl_usd": null,
+  "yearly_pl_usd": null,
+  "usd_krw_rate": null,
+  "snapshot_at": "2026-10-08"
+ },
+ "tickers": {
+  "TQQQ": {
+   "version": "v4.0",
+   "target_profit_pct": 15.0,
+   "division": 40,
+   "mode": "general",
+   "T": 5.419535,
+   "qty": 44.0,
+   "avg_price": 79.62427727272727,
+   "last_close": 83.625,
+   "unrealized_pl": 176.03,
+   "unrealized_pl_pct": 5.02,
+   "cash": 26563.65,
+   "principal": 30067.12,
+   "initial_principal": 30067.12,
+   "book_value": 3503.47,
+   "total_value": 30067.11,
+   "cycles": 0,
+   "today_buy_attempt": 1021.12,
+   "buy_halted": false,
+   "preview_note": null,
+   "phase": "전반전",
+   "star_pct": 10.935,
+   "star_point": 88.3315,
+   "fixed_sell_price": 91.5679,
+   "one_buy_amount": 768.17,
+   "progress_pct": 11.7,
+   "eval_value": 3679.5,
+   "recent_closes": [
+    78.455,
+    78.67,
+    79.775,
+    76.9199,
+    77.345,
+    78.12,
+    78.7637,
+    80.932,
+    82.785,
+    84.2777,
+    83.625
+   ],
+   "orders": [
+    {
+     "side": "sell",
+     "tag": "quarter_sell",
+     "order_type": "LOC_SELL_UP",
+     "qty": 11.0,
+     "price": 88.3315,
+     "label": "LOC/MOC 매도",
+     "amount": 971.65
+    },
+    {
+     "side": "sell",
+     "tag": "fixed_sell",
+     "order_type": "LIMIT_SELL",
+     "qty": 33.0,
+     "price": 91.5679,
+     "label": "지정가 매도",
+     "amount": 3021.74
+    },
+    {
+     "side": "buy",
+     "tag": "buy_avg_half",
+     "order_type": "LOC_BUY",
+     "qty": 4.0,
+     "price": 79.6243,
+     "label": "평단가 LOC 매수",
+     "amount": 318.5
+    },
+    {
+     "side": "buy",
+     "tag": "buy_star_half",
+     "order_type": "LOC_BUY",
+     "qty": 4.0,
+     "price": 88.3215,
+     "label": "별지점 LOC 매수",
+     "amount": 353.29
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 79.61,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 79.61
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 76.81,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 76.81
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 69.83,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 69.83
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 64.01,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 64.01
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 59.08,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 59.08
+    }
+   ]
+  },
+  "SOXL": {
+   "version": "v4.0",
+   "target_profit_pct": 20.0,
+   "division": 40,
+   "mode": "general",
+   "T": 4.833682,
+   "qty": 49.0,
+   "avg_price": 153.03630612244896,
+   "last_close": 158.57,
+   "unrealized_pl": 271.15,
+   "unrealized_pl_pct": 3.62,
+   "cash": 62657.83,
+   "principal": 70156.61,
+   "initial_principal": 70156.61,
+   "book_value": 7498.78,
+   "total_value": 70156.61,
+   "cycles": 0,
+   "today_buy_attempt": 2330.94,
+   "buy_halted": false,
+   "preview_note": null,
+   "phase": "전반전",
+   "star_pct": 15.166,
+   "star_point": 176.2463,
+   "fixed_sell_price": 183.6436,
+   "one_buy_amount": 1781.76,
+   "progress_pct": 10.7,
+   "eval_value": 7769.93,
+   "recent_closes": [
+    143.5,
+    146.16,
+    152.09,
+    142.085,
+    146.3758,
+    147.94,
+    154.14,
+    163.9,
+    163.54,
+    164.09,
+    158.57
+   ],
+   "orders": [
+    {
+     "side": "sell",
+     "tag": "quarter_sell",
+     "order_type": "LOC_SELL_UP",
+     "qty": 12.0,
+     "price": 176.2463,
+     "label": "LOC/MOC 매도",
+     "amount": 2114.96
+    },
+    {
+     "side": "sell",
+     "tag": "fixed_sell",
+     "order_type": "LIMIT_SELL",
+     "qty": 37.0,
+     "price": 183.6436,
+     "label": "지정가 매도",
+     "amount": 6794.81
+    },
+    {
+     "side": "buy",
+     "tag": "buy_avg_half",
+     "order_type": "LOC_BUY",
+     "qty": 5.0,
+     "price": 153.0363,
+     "label": "평단가 LOC 매수",
+     "amount": 765.18
+    },
+    {
+     "side": "buy",
+     "tag": "buy_star_half",
+     "order_type": "LOC_BUY",
+     "qty": 5.0,
+     "price": 176.2363,
+     "label": "별지점 LOC 매수",
+     "amount": 881.18
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 153.02,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 153.02
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 148.47,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 148.47
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 137.05,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 137.05
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 127.26,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 127.26
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 118.78,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 118.78
+    }
+   ]
+  }
+ },
+ "pending_orders": []
+}
