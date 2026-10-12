@@ -1,6 +1,11 @@
 {
  "accounts": [
   {
+   "slug": "namu",
+   "label": "나무증권",
+   "file": "data/namu.json"
+  },
+  {
    "slug": "kiwoom-mock",
    "label": "키움_해외가상투자",
    "file": "data/kiwoom-mock.json"

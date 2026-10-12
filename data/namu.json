@@ -1,0 +1,126 @@
+{
+ "schema": 1,
+ "label": "나무증권",
+ "slug": "namu",
+ "mode": "실전투자",
+ "updated_at": "2026-10-12 11:32:02",
+ "updated_at_iso": "2026-10-12T11:32:02.178405+09:00",
+ "now_ny": "2026-10-11 22:32:02 EDT",
+ "schedule": {
+  "last_run_date": null,
+  "last_reconcile_date": null,
+  "next_daily_run": "2026-10-12 18:00:00 KST",
+  "next_reconcile_run": "2026-10-13 05:10:00 KST",
+  "next_preview_run": null
+ },
+ "totals": {
+  "principal": 4000.0,
+  "cash": 4000.0,
+  "book_value": 0.0,
+  "total_value": 4000.0,
+  "unrealized_pl": 0.0,
+  "principal_usage_pct": 0.0,
+  "today_buy_attempt": 397.38
+ },
+ "reconciliation": null,
+ "account_snapshot": null,
+ "tickers": {
+  "TQQQ": {
+   "version": "v4.0",
+   "target_profit_pct": 15.0,
+   "division": 20,
+   "mode": "general",
+   "T": 0.0,
+   "qty": 0,
+   "avg_price": 0,
+   "last_close": 81.28,
+   "unrealized_pl": null,
+   "unrealized_pl_pct": null,
+   "cash": 4000.0,
+   "principal": 4000.0,
+   "initial_principal": 4000.0,
+   "book_value": 0,
+   "total_value": 4000.0,
+   "cycles": 0,
+   "today_buy_attempt": 397.38,
+   "buy_halted": false,
+   "preview_note": null,
+   "phase": "전반전",
+   "star_pct": 15.0,
+   "star_point": null,
+   "fixed_sell_price": null,
+   "one_buy_amount": 200.0,
+   "progress_pct": 0.0,
+   "eval_value": 0.0,
+   "recent_closes": [
+    77.04,
+    77.46,
+    78.03,
+    78.73,
+    81.01,
+    83.12,
+    84.25,
+    83.62,
+    80.23,
+    81.28
+   ],
+   "orders": [
+    {
+     "side": "buy",
+     "tag": "first_buy",
+     "order_type": "LOC_BUY",
+     "qty": 2.0,
+     "price": 89.408,
+     "label": "첫 매수 (큰수 LOC)",
+     "amount": 178.82
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 66.66,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 66.66
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 50.0,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 50.0
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 40.0,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 40.0
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 33.33,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 33.33
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 28.57,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 28.57
+    }
+   ]
+  }
+ },
+ "pending_orders": []
+}
