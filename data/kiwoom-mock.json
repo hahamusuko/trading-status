@@ -3,15 +3,15 @@
  "label": "키움_해외가상투자",
  "slug": "kiwoom-mock",
  "mode": "모의투자",
- "updated_at": "2026-10-14 18:00:02",
- "updated_at_iso": "2026-10-14T18:00:02.891576+09:00",
- "now_ny": "2026-10-14 05:00:02 EDT",
+ "updated_at": "2026-10-16 04:55:46",
+ "updated_at_iso": "2026-10-16T04:55:46.353448+09:00",
+ "now_ny": "2026-10-15 15:55:46 EDT",
  "schedule": {
-  "last_run_date": "2026-10-14",
+  "last_run_date": "2026-10-16",
   "last_reconcile_date": "2026-10-14",
-  "next_daily_run": "2026-10-15 04:55:00 KST",
-  "next_reconcile_run": "2026-10-15 05:10:00 KST",
-  "next_preview_run": "2026-10-15 18:00:00 KST"
+  "next_daily_run": "2026-10-17 04:55:00 KST",
+  "next_reconcile_run": "2026-10-16 05:10:00 KST",
+  "next_preview_run": "2026-10-16 18:00:00 KST"
  },
  "totals": {
   "principal": 100223.73,
@@ -23,10 +23,10 @@
   "today_buy_attempt": 3311.84
  },
  "reconciliation": {
-  "checked_at": "2026-10-14",
-  "real_usd_cash": 84947.65,
-  "local_total_cash": 82817.65,
-  "diff": 2130.0
+  "checked_at": "2026-10-16",
+  "real_usd_cash": 80058.43,
+  "local_total_cash": 80331.71,
+  "diff": -273.29
  },
  "account_snapshot": {
   "monthly_pl_usd": null,
@@ -292,5 +292,150 @@
    ]
   }
  },
- "pending_orders": []
+ "pending_orders": [
+  {
+   "ticker": "TQQQ",
+   "side": "sell",
+   "tag": "quarter_sell",
+   "order_type": "LOC_SELL_UP",
+   "qty": 18.0,
+   "price": 86.52485640774837
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "sell",
+   "tag": "fixed_sell",
+   "order_type": "LIMIT_SELL",
+   "qty": 52.0,
+   "price": 91.55197642857141
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "buy_avg_half",
+   "order_type": "LOC_BUY",
+   "qty": 4.0,
+   "price": 79.61041428571427
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "buy_star_half",
+   "order_type": "LOC_BUY",
+   "qty": 4.0,
+   "price": 86.514856
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 79.6
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 77.56
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 70.51
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 64.63
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 59.66
+  },
+  {
+   "ticker": "SOXL",
+   "side": "sell",
+   "tag": "quarter_sell",
+   "order_type": "LOC_SELL_UP",
+   "qty": 25.0,
+   "price": 159.18222898923162
+  },
+  {
+   "ticker": "SOXL",
+   "side": "sell",
+   "tag": "fixed_sell",
+   "order_type": "LIMIT_SELL",
+   "qty": 75.0,
+   "price": 171.8314308
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "buy_avg_half",
+   "order_type": "LOC_BUY",
+   "qty": 6.0,
+   "price": 143.192859
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "buy_star_half",
+   "order_type": "LOC_BUY",
+   "qty": 5.0,
+   "price": 159.172229
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 143.18
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 137.81
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 127.97
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 119.43
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 111.97
+  }
+ ]
 }
