@@ -3,9 +3,9 @@
  "label": "한국투자증권",
  "slug": "kis",
  "mode": "실전투자",
- "updated_at": "2026-10-16 18:00:23",
- "updated_at_iso": "2026-10-16T18:00:23.532205+09:00",
- "now_ny": "2026-10-16 05:00:23 EDT",
+ "updated_at": "2026-10-16 22:35:12",
+ "updated_at_iso": "2026-10-16T22:35:12.560647+09:00",
+ "now_ny": "2026-10-16 09:35:12 EDT",
  "schedule": {
   "last_run_date": null,
   "last_reconcile_date": "2026-10-16",
