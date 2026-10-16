@@ -3,13 +3,13 @@
  "label": "한국투자증권",
  "slug": "kis",
  "mode": "실전투자",
- "updated_at": "2026-10-16 06:10:03",
- "updated_at_iso": "2026-10-16T06:10:03.474348+09:00",
- "now_ny": "2026-10-15 17:10:03 EDT",
+ "updated_at": "2026-10-16 18:00:23",
+ "updated_at_iso": "2026-10-16T18:00:23.532205+09:00",
+ "now_ny": "2026-10-16 05:00:23 EDT",
  "schedule": {
   "last_run_date": null,
   "last_reconcile_date": "2026-10-16",
-  "next_daily_run": "2026-10-16 18:00:00 KST",
+  "next_daily_run": "2026-10-19 18:00:00 KST",
   "next_reconcile_run": "2026-10-17 05:10:00 KST",
   "next_preview_run": null
  },
@@ -20,9 +20,14 @@
   "total_value": 3978.27,
   "unrealized_pl": 0.0,
   "principal_usage_pct": 0.0,
-  "today_buy_attempt": 380.42
+  "today_buy_attempt": 379.76
  },
- "reconciliation": null,
+ "reconciliation": {
+  "checked_at": "2026-10-16",
+  "real_usd_cash": 3978.27,
+  "local_total_cash": 3978.27,
+  "diff": 0.0
+ },
  "account_snapshot": {
   "monthly_pl_usd": 0.0,
   "yearly_pl_usd": 0.0,
@@ -38,7 +43,7 @@
    "T": 0.0,
    "qty": 0,
    "avg_price": 0,
-   "last_close": 74.12,
+   "last_close": 73.82,
    "unrealized_pl": null,
    "unrealized_pl_pct": null,
    "cash": 3978.27,
@@ -47,7 +52,7 @@
    "book_value": 0,
    "total_value": 3978.27,
    "cycles": 0,
-   "today_buy_attempt": 380.42,
+   "today_buy_attempt": 379.76,
    "buy_halted": false,
    "preview_note": null,
    "phase": "전반전",
@@ -58,6 +63,25 @@
    "progress_pct": 0.0,
    "eval_value": 0.0,
    "recent_closes": [
+    71.891,
+    72.2303,
+    72.0207,
+    71.4119,
+    69.0764,
+    70.843,
+    69.1363,
+    67.769,
+    67.7989,
+    71.2422,
+    72.4998,
+    78.7577,
+    80.674,
+    78.66,
+    78.58,
+    79.6,
+    77.04,
+    77.46,
+    78.03,
     78.73,
     81.01,
     83.12,
@@ -67,7 +91,8 @@
     81.28,
     79.61,
     78.81,
-    74.12
+    74.12,
+    73.82
    ],
    "orders": [
     {
@@ -75,9 +100,9 @@
      "tag": "first_buy",
      "order_type": "LOC_BUY",
      "qty": 2.0,
-     "price": 81.532,
+     "price": 81.202,
      "label": "첫 매수 (큰수 LOC)",
-     "amount": 163.06
+     "amount": 162.4
     },
     {
      "side": "buy",
