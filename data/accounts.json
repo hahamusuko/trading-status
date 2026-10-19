@@ -6,6 +6,11 @@
    "file": "data/namu.json"
   },
   {
+   "slug": "kiwoom",
+   "label": "키움",
+   "file": "data/kiwoom.json"
+  },
+  {
    "slug": "kiwoom-mock",
    "label": "키움_해외가상투자",
    "file": "data/kiwoom-mock.json"
