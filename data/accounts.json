@@ -9,11 +9,6 @@
    "slug": "kiwoom-mock",
    "label": "키움_해외가상투자",
    "file": "data/kiwoom-mock.json"
-  },
-  {
-   "slug": "kis",
-   "label": "한국투자증권",
-   "file": "data/kis.json"
   }
  ]
 }
