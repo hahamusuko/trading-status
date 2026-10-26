@@ -3,24 +3,24 @@
  "label": "키움_해외가상투자",
  "slug": "kiwoom-mock",
  "mode": "모의투자",
- "updated_at": "2026-10-27 04:55:53",
- "updated_at_iso": "2026-10-27T04:55:53.068603+09:00",
- "now_ny": "2026-10-26 15:55:53 EDT",
+ "updated_at": "2026-10-27 05:10:21",
+ "updated_at_iso": "2026-10-27T05:10:21.137346+09:00",
+ "now_ny": "2026-10-26 16:10:21 EDT",
  "schedule": {
   "last_run_date": "2026-10-27",
-  "last_reconcile_date": "2026-10-24",
+  "last_reconcile_date": "2026-10-27",
   "next_daily_run": "2026-10-28 04:55:00 KST",
-  "next_reconcile_run": "2026-10-27 05:10:00 KST",
+  "next_reconcile_run": "2026-10-28 05:10:00 KST",
   "next_preview_run": "2026-10-27 18:00:00 KST"
  },
  "totals": {
   "principal": 100223.73,
-  "cash": 63608.29,
-  "book_value": 36615.44,
+  "cash": 61122.11,
+  "book_value": 39101.62,
   "total_value": 100223.73,
-  "unrealized_pl": -8536.63,
-  "principal_usage_pct": 36.5,
-  "today_buy_attempt": 3269.91
+  "unrealized_pl": -6526.04,
+  "principal_usage_pct": 39.0,
+  "today_buy_attempt": 3317.07
  },
  "reconciliation": {
   "checked_at": "2026-10-27",
@@ -32,7 +32,7 @@
   "monthly_pl_usd": null,
   "yearly_pl_usd": null,
   "usd_krw_rate": null,
-  "snapshot_at": "2026-10-24"
+  "snapshot_at": "2026-10-27"
  },
  "tickers": {
   "TQQQ": {
@@ -40,30 +40,29 @@
    "target_profit_pct": 15.0,
    "division": 40,
    "mode": "general",
-   "T": 15.419535,
-   "qty": 145.0,
-   "avg_price": 74.50003103448275,
-   "last_close": 66.29,
-   "unrealized_pl": -1190.45,
-   "unrealized_pl_pct": -11.02,
-   "cash": 19264.61,
+   "T": 16.419535,
+   "qty": 156.0,
+   "avg_price": 74.07793205128203,
+   "last_close": 68.4899,
+   "unrealized_pl": -871.73,
+   "unrealized_pl_pct": -7.54,
+   "cash": 18510.96,
    "principal": 30067.12,
    "initial_principal": 30067.12,
-   "book_value": 10802.5,
+   "book_value": 11556.16,
    "total_value": 30067.11,
    "cycles": 0,
-   "today_buy_attempt": 1062.8,
+   "today_buy_attempt": 1056.23,
    "buy_halted": false,
    "preview_note": null,
    "phase": "전반전",
-   "star_pct": 3.435,
-   "star_point": 77.0594,
-   "fixed_sell_price": 85.675,
-   "one_buy_amount": 783.74,
-   "progress_pct": 35.9,
-   "eval_value": 9612.05,
+   "star_pct": 2.685,
+   "star_point": 76.0672,
+   "fixed_sell_price": 85.1896,
+   "one_buy_amount": 785.01,
+   "progress_pct": 38.4,
+   "eval_value": 10684.42,
    "recent_closes": [
-    69.27,
     67.9,
     67.93,
     71.38,
@@ -92,89 +91,90 @@
     70.41,
     72.61,
     66.42,
-    66.29
+    66.29,
+    68.4899
    ],
    "orders": [
     {
      "side": "sell",
      "tag": "quarter_sell",
      "order_type": "LOC_SELL_UP",
-     "qty": 36.0,
-     "price": 77.0594,
+     "qty": 39.0,
+     "price": 76.0672,
      "label": "LOC/MOC 매도",
-     "amount": 2774.14
+     "amount": 2966.62
     },
     {
      "side": "sell",
      "tag": "fixed_sell",
      "order_type": "LIMIT_SELL",
-     "qty": 109.0,
-     "price": 85.675,
+     "qty": 117.0,
+     "price": 85.1896,
      "label": "지정가 매도",
-     "amount": 9338.57
+     "amount": 9967.18
     },
     {
      "side": "buy",
      "tag": "buy_avg_half",
      "order_type": "LOC_BUY",
      "qty": 5.0,
-     "price": 74.5,
+     "price": 74.0779,
      "label": "평단가 LOC 매수",
-     "amount": 372.5
+     "amount": 370.39
     },
     {
      "side": "buy",
      "tag": "buy_star_half",
      "order_type": "LOC_BUY",
      "qty": 5.0,
-     "price": 77.0494,
+     "price": 76.0572,
      "label": "별지점 LOC 매수",
-     "amount": 385.25
+     "amount": 380.29
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 71.24,
+     "price": 71.36,
      "label": "폭락장 대비 추가 매수",
-     "amount": 71.24
+     "amount": 71.36
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 65.31,
+     "price": 65.41,
      "label": "폭락장 대비 추가 매수",
-     "amount": 65.31
+     "amount": 65.41
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 60.28,
+     "price": 60.38,
      "label": "폭락장 대비 추가 매수",
-     "amount": 60.28
+     "amount": 60.38
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 55.98,
+     "price": 56.07,
      "label": "폭락장 대비 추가 매수",
-     "amount": 55.98
+     "amount": 56.07
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 52.24,
+     "price": 52.33,
      "label": "폭락장 대비 추가 매수",
-     "amount": 52.24
+     "amount": 52.33
     }
    ]
   },
@@ -183,30 +183,29 @@
    "target_profit_pct": 20.0,
    "division": 40,
    "mode": "general",
-   "T": 15.833682,
-   "qty": 221.0,
-   "avg_price": 116.80061312217194,
-   "last_close": 83.56,
-   "unrealized_pl": -7346.18,
-   "unrealized_pl_pct": -28.46,
-   "cash": 44343.67,
+   "T": 16.833682,
+   "qty": 240.0,
+   "avg_price": 114.77274083333332,
+   "last_close": 91.2131,
+   "unrealized_pl": -5654.31,
+   "unrealized_pl_pct": -20.53,
+   "cash": 42611.15,
    "principal": 70156.61,
    "initial_principal": 70156.61,
-   "book_value": 25812.94,
+   "book_value": 27545.46,
    "total_value": 70156.61,
    "cycles": 0,
-   "today_buy_attempt": 2207.11,
+   "today_buy_attempt": 2260.85,
    "buy_halted": false,
    "preview_note": null,
    "phase": "전반전",
-   "star_pct": 4.166,
-   "star_point": 121.6669,
-   "fixed_sell_price": 140.1607,
-   "one_buy_amount": 1834.94,
-   "progress_pct": 36.8,
-   "eval_value": 18466.76,
+   "star_pct": 3.166,
+   "star_point": 118.4068,
+   "fixed_sell_price": 137.7273,
+   "one_buy_amount": 1839.36,
+   "progress_pct": 39.3,
+   "eval_value": 21891.14,
    "recent_closes": [
-    101.13,
     102.32,
     103.97,
     114.82,
@@ -235,237 +234,93 @@
     97.55,
     103.24,
     82.11,
-    83.56
+    83.56,
+    91.2131
    ],
    "orders": [
     {
      "side": "sell",
      "tag": "quarter_sell",
      "order_type": "LOC_SELL_UP",
-     "qty": 55.0,
-     "price": 121.6669,
+     "qty": 60.0,
+     "price": 118.4068,
      "label": "LOC/MOC 매도",
-     "amount": 6691.68
+     "amount": 7104.41
     },
     {
      "side": "sell",
      "tag": "fixed_sell",
      "order_type": "LIMIT_SELL",
-     "qty": 166.0,
-     "price": 140.1607,
+     "qty": 180.0,
+     "price": 137.7273,
      "label": "지정가 매도",
-     "amount": 23266.68
+     "amount": 24790.91
     },
     {
      "side": "buy",
      "tag": "buy_avg_half",
      "order_type": "LOC_BUY",
-     "qty": 7.0,
-     "price": 116.8006,
+     "qty": 8.0,
+     "price": 114.7727,
      "label": "평단가 LOC 매수",
-     "amount": 817.6
+     "amount": 918.18
     },
     {
      "side": "buy",
      "tag": "buy_star_half",
      "order_type": "LOC_BUY",
      "qty": 7.0,
-     "price": 121.6569,
+     "price": 118.3968,
      "label": "별지점 LOC 매수",
-     "amount": 851.6
+     "amount": 828.78
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 116.79,
+     "price": 114.76,
      "label": "폭락장 대비 추가 매수",
-     "amount": 116.79
+     "amount": 114.76
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 114.68,
+     "price": 108.19,
      "label": "폭락장 대비 추가 매수",
-     "amount": 114.68
+     "amount": 108.19
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 107.93,
+     "price": 102.18,
      "label": "폭락장 대비 추가 매수",
-     "amount": 107.93
+     "amount": 102.18
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 101.94,
+     "price": 96.8,
      "label": "폭락장 대비 추가 매수",
-     "amount": 101.94
+     "amount": 96.8
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 96.57,
+     "price": 91.96,
      "label": "폭락장 대비 추가 매수",
-     "amount": 96.57
+     "amount": 91.96
     }
    ]
   }
  },
- "pending_orders": [
-  {
-   "ticker": "TQQQ",
-   "side": "sell",
-   "tag": "quarter_sell",
-   "order_type": "LOC_SELL_UP",
-   "qty": 36.0,
-   "price": 77.05936691937546
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "sell",
-   "tag": "fixed_sell",
-   "order_type": "LIMIT_SELL",
-   "qty": 109.0,
-   "price": 85.67503568965515
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "buy_avg_half",
-   "order_type": "LOC_BUY",
-   "qty": 5.0,
-   "price": 74.50003103448275
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "buy_star_half",
-   "order_type": "LOC_BUY",
-   "qty": 5.0,
-   "price": 77.049367
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 71.24
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 65.31
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 60.28
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 55.98
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 52.24
-  },
-  {
-   "ticker": "SOXL",
-   "side": "sell",
-   "tag": "quarter_sell",
-   "order_type": "LOC_SELL_UP",
-   "qty": 55.0,
-   "price": 121.66689809079135
-  },
-  {
-   "ticker": "SOXL",
-   "side": "sell",
-   "tag": "fixed_sell",
-   "order_type": "LIMIT_SELL",
-   "qty": 166.0,
-   "price": 140.16073574660632
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "buy_avg_half",
-   "order_type": "LOC_BUY",
-   "qty": 7.0,
-   "price": 116.80061312217194
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "buy_star_half",
-   "order_type": "LOC_BUY",
-   "qty": 7.0,
-   "price": 121.656898
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 116.79
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 114.68
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 107.93
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 101.94
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 96.57
-  }
- ]
+ "pending_orders": []
 }
