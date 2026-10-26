@@ -3,15 +3,15 @@
  "label": "키움_해외가상투자",
  "slug": "kiwoom-mock",
  "mode": "모의투자",
- "updated_at": "2026-10-24 06:10:04",
- "updated_at_iso": "2026-10-24T06:10:04.588497+09:00",
- "now_ny": "2026-10-23 17:10:04 EDT",
+ "updated_at": "2026-10-26 18:00:14",
+ "updated_at_iso": "2026-10-26T18:00:14.667586+09:00",
+ "now_ny": "2026-10-26 05:00:14 EDT",
  "schedule": {
   "last_run_date": "2026-10-24",
   "last_reconcile_date": "2026-10-24",
   "next_daily_run": "2026-10-27 04:55:00 KST",
   "next_reconcile_run": "2026-10-27 05:10:00 KST",
-  "next_preview_run": "2026-10-26 18:00:00 KST"
+  "next_preview_run": "2026-10-27 18:00:00 KST"
  },
  "totals": {
   "principal": 100223.73,
