@@ -1,6 +1,11 @@
 {
  "accounts": [
   {
+   "slug": "ls",
+   "label": "LS증권",
+   "file": "data/ls.json"
+  },
+  {
    "slug": "namu",
    "label": "나무증권",
    "file": "data/namu.json"
