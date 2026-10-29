@@ -3,13 +3,13 @@
  "label": "나무증권",
  "slug": "namu",
  "mode": "실전투자",
- "updated_at": "2026-10-29 06:10:05",
- "updated_at_iso": "2026-10-29T06:10:05.085445+09:00",
- "now_ny": "2026-10-28 17:10:05 EDT",
+ "updated_at": "2026-10-29 18:00:21",
+ "updated_at_iso": "2026-10-29T18:00:21.651539+09:00",
+ "now_ny": "2026-10-29 05:00:21 EDT",
  "schedule": {
-  "last_run_date": "2026-10-28",
+  "last_run_date": "2026-10-29",
   "last_reconcile_date": "2026-10-29",
-  "next_daily_run": "2026-10-29 18:00:00 KST",
+  "next_daily_run": "2026-10-30 18:00:00 KST",
   "next_reconcile_run": "2026-10-30 05:10:00 KST",
   "next_preview_run": null
  },
@@ -23,10 +23,10 @@
   "today_buy_attempt": 379.04
  },
  "reconciliation": {
-  "checked_at": "2026-10-28",
-  "real_usd_cash": 2505.91,
-  "local_total_cash": 2508.14,
-  "diff": -2.23
+  "checked_at": "2026-10-29",
+  "real_usd_cash": 2433.48,
+  "local_total_cash": 2435.78,
+  "diff": -2.3
  },
  "account_snapshot": {
   "monthly_pl_usd": 0.0,
@@ -179,5 +179,78 @@
    ]
   }
  },
- "pending_orders": []
+ "pending_orders": [
+  {
+   "ticker": "TQQQ",
+   "side": "sell",
+   "tag": "quarter_sell",
+   "order_type": "LOC_SELL_UP",
+   "qty": 6.0,
+   "price": 72.43381960227273
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "sell",
+   "tag": "fixed_sell",
+   "order_type": "LIMIT_SELL",
+   "qty": 16.0,
+   "price": 81.7657840909091
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "buy_avg_half",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 71.10068181818183
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "buy_star_half",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 72.42382
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 71.09
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 54.12
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 43.3
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 36.08
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 30.93
+  }
+ ]
 }
