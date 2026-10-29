@@ -3,9 +3,9 @@
  "label": "LS증권",
  "slug": "ls",
  "mode": "실전투자",
- "updated_at": "2026-10-29 18:00:26",
- "updated_at_iso": "2026-10-29T18:00:26.586316+09:00",
- "now_ny": "2026-10-29 05:00:26 EDT",
+ "updated_at": "2026-10-29 22:35:02",
+ "updated_at_iso": "2026-10-29T22:35:02.157902+09:00",
+ "now_ny": "2026-10-29 09:35:02 EDT",
  "schedule": {
   "last_run_date": "2026-10-29",
   "last_reconcile_date": "2026-10-29",
@@ -15,12 +15,12 @@
  },
  "totals": {
   "principal": 88042.84,
-  "cash": 87506.09,
-  "book_value": 536.75,
+  "cash": 85895.84,
+  "book_value": 2147.0,
   "total_value": 88042.84,
   "unrealized_pl": 0.0,
-  "principal_usage_pct": 0.6,
-  "today_buy_attempt": 2616.43
+  "principal_usage_pct": 2.4,
+  "today_buy_attempt": 2610.79
  },
  "reconciliation": {
   "checked_at": "2026-10-29",
@@ -41,27 +41,27 @@
    "division": 40,
    "mode": "general",
    "T": 1.0,
-   "qty": 5.0,
+   "qty": 20.0,
    "avg_price": 107.35,
    "last_close": 107.35,
    "unrealized_pl": 0.0,
    "unrealized_pl_pct": 0.0,
-   "cash": 87506.09,
+   "cash": 85895.84,
    "principal": 88042.84,
    "initial_principal": 88042.84,
-   "book_value": 536.75,
+   "book_value": 2147.0,
    "total_value": 88042.84,
    "cycles": 0,
-   "today_buy_attempt": 2616.43,
+   "today_buy_attempt": 2610.79,
    "buy_halted": false,
    "preview_note": null,
    "phase": "전반전",
    "star_pct": 19.0,
    "star_point": 127.7465,
    "fixed_sell_price": 128.82,
-   "one_buy_amount": 2243.75,
-   "progress_pct": 0.6,
-   "eval_value": 536.75,
+   "one_buy_amount": 2202.46,
+   "progress_pct": 2.4,
+   "eval_value": 2147.0,
    "recent_closes": [
     114.82,
     123.67,
@@ -99,19 +99,19 @@
      "side": "sell",
      "tag": "quarter_sell",
      "order_type": "LOC_SELL_UP",
-     "qty": 1.0,
+     "qty": 5.0,
      "price": 127.7465,
      "label": "LOC/MOC 매도",
-     "amount": 127.75
+     "amount": 638.73
     },
     {
      "side": "sell",
      "tag": "fixed_sell",
      "order_type": "LIMIT_SELL",
-     "qty": 4.0,
+     "qty": 15.0,
      "price": 128.82,
      "label": "지정가 매도",
-     "amount": 515.28
+     "amount": 1932.3
     },
     {
      "side": "buy",
@@ -154,27 +154,27 @@
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 106.84,
+     "price": 104.87,
      "label": "폭락장 대비 추가 매수",
-     "amount": 106.84
+     "amount": 104.87
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 101.98,
+     "price": 100.11,
      "label": "폭락장 대비 추가 매수",
-     "amount": 101.98
+     "amount": 100.11
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 97.55,
+     "price": 95.75,
      "label": "폭락장 대비 추가 매수",
-     "amount": 97.55
+     "amount": 95.75
     }
    ]
   }
