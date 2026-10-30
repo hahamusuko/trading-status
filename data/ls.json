@@ -3,9 +3,9 @@
  "label": "LS증권",
  "slug": "ls",
  "mode": "실전투자",
- "updated_at": "2026-10-30 18:10:06",
- "updated_at_iso": "2026-10-30T18:10:06.665241+09:00",
- "now_ny": "2026-10-30 05:10:06 EDT",
+ "updated_at": "2026-10-30 19:10:34",
+ "updated_at_iso": "2026-10-30T19:10:34.525526+09:00",
+ "now_ny": "2026-10-30 06:10:32 EDT",
  "schedule": {
   "last_run_date": "2026-10-30",
   "last_reconcile_date": "2026-10-30",
@@ -176,7 +176,8 @@
      "label": "폭락장 대비 추가 매수",
      "amount": 95.81
     }
-   ]
+   ],
+   "next_cycle": null
   }
  },
  "pending_orders": [
@@ -252,5 +253,6 @@
    "qty": 1.0,
    "price": 95.81
   }
- ]
+ ],
+ "bot_username": "hahamusuko_muhan_bot"
 }

@@ -156,13 +156,14 @@ function tickerCard(name, t) {
   const tPct = div ? Math.min(100, T / div * 100) : 0;
   const modeChip = t.mode === 'general' ? `<span class="badge b-chip">${esc(t.phase)}</span>` : `<span class="badge b-bad">리버스모드</span>`;
   const halted = t.buy_halted ? '<div class="alert bad">매수 중단 상태 (T값 이상 감지) — 매도만 진행됩니다.</div>' : '';
+  const ncAlert = t.next_cycle ? `<div class="alert warn">사이클 완료 — ${t.next_cycle.application ? '다음 사이클 신청 접수됨 (다음 주문 때 첫 매수)' : '무매운영 앱에서 다음 사이클 주문 신청이 필요합니다 (최대 ' + usd(t.next_cycle.max_budget) + ')'}</div>` : '';
   return `<div class="card">
     <div class="t-head"><span class="name">${esc(name)}</span>
       <span class="badge b-chip">${esc(String(t.version || '').toUpperCase())}</span>
       <span class="badge b-chip">목표 ${esc(t.target_profit_pct)}%</span>
       <span class="badge b-chip">${esc(div)}분할</span>${modeChip}
       ${t.cycles ? `<span class="badge b-chip">사이클 ${esc(t.cycles + 1)}회차</span>` : ''}</div>
-    ${halted}
+    ${halted}${ncAlert}
     <div class="tbar"><i style="width:${tPct.toFixed(1)}%"></i></div>
     <div class="tline"><span>T = ${T.toFixed(2)} / ${div}</span><span>매수 진행 ${tPct.toFixed(1)}%</span></div>
     ${spark(t)}
