@@ -3,24 +3,24 @@
  "label": "LS증권",
  "slug": "ls",
  "mode": "실전투자",
- "updated_at": "2026-11-02 23:35:03",
- "updated_at_iso": "2026-11-02T23:35:03.714114+09:00",
- "now_ny": "2026-11-02 09:35:02 EST",
+ "updated_at": "2026-11-03 06:10:18",
+ "updated_at_iso": "2026-11-03T06:10:18.577490+09:00",
+ "now_ny": "2026-11-02 16:10:16 EST",
  "schedule": {
   "last_run_date": "2026-11-02",
-  "last_reconcile_date": "2026-10-31",
+  "last_reconcile_date": "2026-11-03",
   "next_daily_run": "2026-11-03 18:00:00 KST",
-  "next_reconcile_run": "2026-11-03 06:10:00 KST",
+  "next_reconcile_run": "2026-11-04 06:10:00 KST",
   "next_preview_run": null
  },
  "totals": {
   "principal": 88042.84,
-  "cash": 81973.5,
-  "book_value": 6069.34,
+  "cash": 80269.25,
+  "book_value": 7773.59,
   "total_value": 88042.84,
-  "unrealized_pl": -1138.14,
-  "principal_usage_pct": 6.9,
-  "today_buy_attempt": 2507.03
+  "unrealized_pl": -1706.46,
+  "principal_usage_pct": 8.8,
+  "today_buy_attempt": 2585.13
  },
  "reconciliation": {
   "checked_at": "2026-11-02",
@@ -32,8 +32,8 @@
  "account_snapshot": {
   "monthly_pl_usd": 0.0,
   "yearly_pl_usd": 0.0,
-  "usd_krw_rate": 1335.3,
-  "snapshot_at": "2026-10-31"
+  "usd_krw_rate": 1337.2,
+  "snapshot_at": "2026-11-03"
  },
  "tickers": {
   "SOXL": {
@@ -41,30 +41,29 @@
    "target_profit_pct": 20.0,
    "division": 40,
    "mode": "general",
-   "T": 3.0,
-   "qty": 64.0,
-   "avg_price": 94.83343750000002,
-   "last_close": 77.05,
-   "unrealized_pl": -1138.14,
-   "unrealized_pl_pct": -18.75,
-   "cash": 81973.5,
+   "T": 4.0,
+   "qty": 89.0,
+   "avg_price": 87.34370786516855,
+   "last_close": 68.17,
+   "unrealized_pl": -1706.46,
+   "unrealized_pl_pct": -21.95,
+   "cash": 80269.25,
    "principal": 88042.84,
    "initial_principal": 88042.84,
-   "book_value": 6069.34,
+   "book_value": 7773.59,
    "total_value": 88042.84,
    "cycles": 0,
-   "today_buy_attempt": 2507.03,
+   "today_buy_attempt": 2585.13,
    "buy_halted": false,
    "preview_note": null,
    "phase": "전반전",
-   "star_pct": 17.0,
-   "star_point": 110.9551,
-   "fixed_sell_price": 113.8001,
-   "one_buy_amount": 2215.5,
-   "progress_pct": 6.9,
-   "eval_value": 4931.2,
+   "star_pct": 16.0,
+   "star_point": 101.3187,
+   "fixed_sell_price": 104.8124,
+   "one_buy_amount": 2229.7,
+   "progress_pct": 8.8,
+   "eval_value": 6067.13,
    "recent_closes": [
-    141.93,
     151.95,
     146.25,
     146.33,
@@ -93,167 +92,95 @@
     101.08,
     107.35,
     102.39,
-    77.05
+    77.05,
+    68.17
    ],
    "orders": [
     {
      "side": "sell",
      "tag": "quarter_sell",
      "order_type": "LOC_SELL_UP",
-     "qty": 16.0,
-     "price": 110.9551,
+     "qty": 22.0,
+     "price": 101.3187,
      "label": "LOC/MOC 매도",
-     "amount": 1775.28
+     "amount": 2229.01
     },
     {
      "side": "sell",
      "tag": "fixed_sell",
      "order_type": "LIMIT_SELL",
-     "qty": 48.0,
-     "price": 113.8001,
+     "qty": 67.0,
+     "price": 104.8124,
      "label": "지정가 매도",
-     "amount": 5462.4
+     "amount": 7022.43
     },
     {
      "side": "buy",
      "tag": "buy_avg_half",
      "order_type": "LOC_BUY",
-     "qty": 11.0,
-     "price": 94.8334,
+     "qty": 12.0,
+     "price": 87.3437,
      "label": "평단가 LOC 매수",
-     "amount": 1043.17
+     "amount": 1048.12
     },
     {
      "side": "buy",
      "tag": "buy_star_half",
      "order_type": "LOC_BUY",
-     "qty": 9.0,
-     "price": 110.9451,
+     "qty": 11.0,
+     "price": 101.3087,
      "label": "별지점 LOC 매수",
-     "amount": 998.51
+     "amount": 1114.4
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 94.82,
+     "price": 87.33,
      "label": "폭락장 대비 추가 매수",
-     "amount": 94.82
+     "amount": 87.33
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 94.81,
+     "price": 87.32,
      "label": "폭락장 대비 추가 매수",
-     "amount": 94.81
+     "amount": 87.32
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 94.8,
+     "price": 85.75,
      "label": "폭락장 대비 추가 매수",
-     "amount": 94.8
+     "amount": 85.75
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 92.31,
+     "price": 82.58,
      "label": "폭락장 대비 추가 매수",
-     "amount": 92.31
+     "amount": 82.58
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 88.62,
+     "price": 79.63,
      "label": "폭락장 대비 추가 매수",
-     "amount": 88.62
+     "amount": 79.63
     }
    ],
    "next_cycle": null
   }
  },
- "pending_orders": [
-  {
-   "ticker": "SOXL",
-   "side": "sell",
-   "tag": "quarter_sell",
-   "order_type": "LOC_SELL_UP",
-   "qty": 16.0,
-   "price": 110.95512187500002
-  },
-  {
-   "ticker": "SOXL",
-   "side": "sell",
-   "tag": "fixed_sell",
-   "order_type": "LIMIT_SELL",
-   "qty": 48.0,
-   "price": 113.80012500000002
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "buy_avg_half",
-   "order_type": "LOC_BUY",
-   "qty": 11.0,
-   "price": 94.83343750000002
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "buy_star_half",
-   "order_type": "LOC_BUY",
-   "qty": 9.0,
-   "price": 110.945122
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 94.82
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 94.81
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 94.8
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 92.31
-  },
-  {
-   "ticker": "SOXL",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 88.62
-  }
- ],
+ "pending_orders": [],
  "bot_username": "hahamusuko_muhan_bot"
 }
