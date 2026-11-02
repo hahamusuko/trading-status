@@ -309,10 +309,12 @@ function accountSection(a) {
   const s = a.schedule || {}, r = a.reconciliation, snap = a.account_snapshot;
   let recon = '<div class="note">아직 점검 기록이 없습니다.</div>';
   if (r) {
-    const tol = Math.max(5, (num(r.local_total_cash) || 0) * 0.01), bad = Math.abs(num(r.diff) || 0) > tol;
+    const tol = Math.max(5, (num(r.local_total_cash) || 0) * 0.01), off = Math.abs(num(r.diff) || 0) > tol;
+    // 외화 RP 자동매매 계좌는 주문가능금액이 RP 평가의 약 97%라 장부보다 적은 게 정상 (scheduler.fx_rp_auto)
+    const rpOk = r.rp_mode && num(r.diff) < 0, bad = off && !rpOk;
     recon = `<dl class="kv"><dt>점검일</dt><dd>${esc(r.checked_at)}</dd>
-      <dt>실제 예수금 (USD)</dt><dd>${usd(r.real_usd_cash)}</dd><dt>프로그램 계산 현금</dt><dd>${usd(r.local_total_cash)}</dd>
-      <dt>차이</dt><dd><span class="badge ${bad ? 'b-bad' : 'b-ok'}">${usd(r.diff)} ${bad ? '확인 필요' : '정상'}</span></dd></dl>`;
+      <dt>${r.rp_mode ? '주문가능금액 (USD, RP 포함)' : '실제 예수금 (USD)'}</dt><dd>${usd(r.real_usd_cash)}</dd><dt>프로그램 계산 현금</dt><dd>${usd(r.local_total_cash)}</dd>
+      <dt>차이</dt><dd><span class="badge ${bad ? 'b-bad' : 'b-ok'}">${usd(r.diff)} ${bad ? '확인 필요' : (off ? 'RP 운용 중 · 정상' : '정상')}</span></dd></dl>`;
   }
   const snapHtml = snap && (snap.monthly_pl_usd || snap.yearly_pl_usd || snap.usd_krw_rate)
     ? `<dl class="kv"><dt>이번 달 실현손익</dt><dd class="${sgn(snap.monthly_pl_usd)}">${usd(snap.monthly_pl_usd)}</dd>
