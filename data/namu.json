@@ -3,9 +3,9 @@
  "label": "나무증권",
  "slug": "namu",
  "mode": "실전투자",
- "updated_at": "2026-11-02 18:00:39",
- "updated_at_iso": "2026-11-02T18:00:39.217543+09:00",
- "now_ny": "2026-11-02 04:00:37 EST",
+ "updated_at": "2026-11-02 18:10:05",
+ "updated_at_iso": "2026-11-02T18:10:05.231053+09:00",
+ "now_ny": "2026-11-02 04:10:03 EST",
  "schedule": {
   "last_run_date": "2026-11-02",
   "last_reconcile_date": "2026-10-31",
