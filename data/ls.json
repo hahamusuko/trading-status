@@ -3,13 +3,13 @@
  "label": "LS증권",
  "slug": "ls",
  "mode": "실전투자",
- "updated_at": "2026-10-31 06:10:04",
- "updated_at_iso": "2026-10-31T06:10:04.484938+09:00",
- "now_ny": "2026-10-30 17:10:03 EDT",
+ "updated_at": "2026-11-02 18:00:20",
+ "updated_at_iso": "2026-11-02T18:00:20.056108+09:00",
+ "now_ny": "2026-11-02 04:00:18 EST",
  "schedule": {
-  "last_run_date": "2026-10-30",
+  "last_run_date": "2026-11-02",
   "last_reconcile_date": "2026-10-31",
-  "next_daily_run": "2026-11-02 18:00:00 KST",
+  "next_daily_run": "2026-11-03 18:00:00 KST",
   "next_reconcile_run": "2026-11-03 06:10:00 KST",
   "next_preview_run": null
  },
@@ -23,10 +23,10 @@
   "today_buy_attempt": 2507.03
  },
  "reconciliation": {
-  "checked_at": "2026-10-30",
-  "real_usd_cash": 83744.36,
-  "local_total_cash": 83745.65,
-  "diff": -1.29
+  "checked_at": "2026-11-02",
+  "real_usd_cash": 77873.09,
+  "local_total_cash": 81973.5,
+  "diff": -4100.41
  },
  "account_snapshot": {
   "monthly_pl_usd": 0.0,
@@ -180,6 +180,79 @@
    "next_cycle": null
   }
  },
- "pending_orders": [],
+ "pending_orders": [
+  {
+   "ticker": "SOXL",
+   "side": "sell",
+   "tag": "quarter_sell",
+   "order_type": "LOC_SELL_UP",
+   "qty": 16.0,
+   "price": 110.95512187500002
+  },
+  {
+   "ticker": "SOXL",
+   "side": "sell",
+   "tag": "fixed_sell",
+   "order_type": "LIMIT_SELL",
+   "qty": 48.0,
+   "price": 113.80012500000002
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "buy_avg_half",
+   "order_type": "LOC_BUY",
+   "qty": 11.0,
+   "price": 94.83343750000002
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "buy_star_half",
+   "order_type": "LOC_BUY",
+   "qty": 9.0,
+   "price": 110.945122
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 94.82
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 94.81
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 94.8
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 92.31
+  },
+  {
+   "ticker": "SOXL",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 88.62
+  }
+ ],
  "bot_username": "hahamusuko_muhan_bot"
 }
