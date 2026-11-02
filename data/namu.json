@@ -3,13 +3,13 @@
  "label": "나무증권",
  "slug": "namu",
  "mode": "실전투자",
- "updated_at": "2026-10-31 06:10:04",
- "updated_at_iso": "2026-10-31T06:10:04.616366+09:00",
- "now_ny": "2026-10-30 17:10:03 EDT",
+ "updated_at": "2026-11-02 18:00:39",
+ "updated_at_iso": "2026-11-02T18:00:39.217543+09:00",
+ "now_ny": "2026-11-02 04:00:37 EST",
  "schedule": {
-  "last_run_date": "2026-10-30",
+  "last_run_date": "2026-11-02",
   "last_reconcile_date": "2026-10-31",
-  "next_daily_run": "2026-11-02 18:00:00 KST",
+  "next_daily_run": "2026-11-03 18:00:00 KST",
   "next_reconcile_run": "2026-11-03 06:10:00 KST",
   "next_preview_run": null
  },
@@ -23,10 +23,10 @@
   "today_buy_attempt": 402.64
  },
  "reconciliation": {
-  "checked_at": "2026-10-30",
-  "real_usd_cash": 2225.51,
-  "local_total_cash": 2228.0,
-  "diff": -2.49
+  "checked_at": "2026-11-02",
+  "real_usd_cash": 2039.31,
+  "local_total_cash": 2041.97,
+  "diff": -2.66
  },
  "account_snapshot": {
   "monthly_pl_usd": 0.0,
@@ -171,6 +171,71 @@
    "next_cycle": null
   }
  },
- "pending_orders": [],
+ "pending_orders": [
+  {
+   "ticker": "TQQQ",
+   "side": "sell",
+   "tag": "quarter_sell",
+   "order_type": "LOC_SELL_UP",
+   "qty": 7.0,
+   "price": 69.14275781250001
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "sell",
+   "tag": "fixed_sell",
+   "order_type": "LIMIT_SELL",
+   "qty": 21.0,
+   "price": 80.41888392857143
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "buy_star_full",
+   "order_type": "LOC_BUY",
+   "qty": 3.0,
+   "price": 69.132758
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 55.18
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 44.15
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 36.79
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 31.53
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 27.59
+  }
+ ],
  "bot_username": "hahamusuko_muhan_bot"
 }
