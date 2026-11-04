@@ -3,24 +3,24 @@
  "label": "키움",
  "slug": "kiwoom",
  "mode": "실전투자",
- "updated_at": "2026-11-03 18:10:05",
- "updated_at_iso": "2026-11-03T18:10:05.144752+09:00",
- "now_ny": "2026-11-03 04:10:03 EST",
+ "updated_at": "2026-11-04 19:29:28",
+ "updated_at_iso": "2026-11-04T19:29:28.857452+09:00",
+ "now_ny": "2026-11-04 05:29:20 EST",
  "schedule": {
   "last_run_date": "2026-11-03",
-  "last_reconcile_date": "2026-11-03",
-  "next_daily_run": "2026-11-04 18:00:00 KST",
-  "next_reconcile_run": "2026-11-04 06:10:00 KST",
+  "last_reconcile_date": "2026-11-04",
+  "next_daily_run": "2026-11-05 18:00:00 KST",
+  "next_reconcile_run": "2026-11-05 06:10:00 KST",
   "next_preview_run": null
  },
  "totals": {
   "principal": 4007.42,
-  "cash": 2472.22,
-  "book_value": 1535.2,
+  "cash": 2290.57,
+  "book_value": 1716.85,
   "total_value": 4007.42,
-  "unrealized_pl": -167.62,
-  "principal_usage_pct": 38.3,
-  "today_buy_attempt": 371.89
+  "unrealized_pl": -142.55,
+  "principal_usage_pct": 42.8,
+  "today_buy_attempt": 400.66
  },
  "reconciliation": {
   "checked_at": "2026-11-03",
@@ -32,8 +32,8 @@
  "account_snapshot": {
   "monthly_pl_usd": 16.5151,
   "yearly_pl_usd": -476.2033,
-  "usd_krw_rate": 1306.49,
-  "snapshot_at": "2026-11-03"
+  "usd_krw_rate": 1324.7,
+  "snapshot_at": "2026-11-04"
  },
  "tickers": {
   "TQQQ": {
@@ -41,30 +41,29 @@
    "target_profit_pct": 15.0,
    "division": 20,
    "mode": "general",
-   "T": 9.0,
-   "qty": 23.0,
-   "avg_price": 66.74782608695652,
-   "last_close": 59.46,
-   "unrealized_pl": -167.62,
-   "unrealized_pl_pct": -10.92,
-   "cash": 2472.22,
+   "T": 10.0,
+   "qty": 26.0,
+   "avg_price": 66.0326923076923,
+   "last_close": 60.55,
+   "unrealized_pl": -142.55,
+   "unrealized_pl_pct": -8.3,
+   "cash": 2290.57,
    "principal": 4007.42,
    "initial_principal": 4007.42,
-   "book_value": 1535.2,
+   "book_value": 1716.85,
    "total_value": 4007.42,
    "cycles": 0,
-   "today_buy_attempt": 371.89,
+   "today_buy_attempt": 400.66,
    "buy_halted": false,
    "preview_note": null,
-   "phase": "전반전",
-   "star_pct": 1.5,
-   "star_point": 67.749,
-   "fixed_sell_price": 76.76,
-   "one_buy_amount": 224.75,
-   "progress_pct": 38.3,
-   "eval_value": 1367.58,
+   "phase": "후반전",
+   "star_pct": 0.0,
+   "star_point": 66.0327,
+   "fixed_sell_price": 75.9376,
+   "one_buy_amount": 229.06,
+   "progress_pct": 42.8,
+   "eval_value": 1574.3,
    "recent_closes": [
-    80.83,
     78.66,
     78.58,
     79.6,
@@ -93,167 +92,86 @@
     72.36,
     69.26,
     62.01,
-    59.46
+    59.46,
+    60.55
    ],
    "orders": [
     {
      "side": "sell",
      "tag": "quarter_sell",
      "order_type": "LOC_SELL_UP",
-     "qty": 6.0,
-     "price": 67.749,
+     "qty": 7.0,
+     "price": 66.0327,
      "label": "LOC/MOC 매도",
-     "amount": 406.49
+     "amount": 462.23
     },
     {
      "side": "sell",
      "tag": "fixed_sell",
      "order_type": "LIMIT_SELL",
-     "qty": 17.0,
-     "price": 76.76,
+     "qty": 19.0,
+     "price": 75.9376,
      "label": "지정가 매도",
-     "amount": 1304.92
+     "amount": 1442.81
     },
     {
      "side": "buy",
-     "tag": "buy_avg_half",
+     "tag": "buy_star_full",
      "order_type": "LOC_BUY",
-     "qty": 1.0,
-     "price": 66.7478,
-     "label": "평단가 LOC 매수",
-     "amount": 66.75
-    },
-    {
-     "side": "buy",
-     "tag": "buy_star_half",
-     "order_type": "LOC_BUY",
-     "qty": 1.0,
-     "price": 67.739,
+     "qty": 3.0,
+     "price": 66.0227,
      "label": "별지점 LOC 매수",
-     "amount": 67.74
+     "amount": 198.07
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 66.73,
+     "price": 57.26,
      "label": "폭락장 대비 추가 매수",
-     "amount": 66.73
+     "amount": 57.26
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 56.18,
+     "price": 45.81,
      "label": "폭락장 대비 추가 매수",
-     "amount": 56.18
+     "amount": 45.81
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 44.94,
+     "price": 38.17,
      "label": "폭락장 대비 추가 매수",
-     "amount": 44.94
+     "amount": 38.17
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 37.45,
+     "price": 32.72,
      "label": "폭락장 대비 추가 매수",
-     "amount": 37.45
+     "amount": 32.72
     },
     {
      "side": "buy",
      "tag": "ladder_buy",
      "order_type": "LOC_BUY",
      "qty": 1.0,
-     "price": 32.1,
+     "price": 28.63,
      "label": "폭락장 대비 추가 매수",
-     "amount": 32.1
+     "amount": 28.63
     }
    ],
    "next_cycle": null
   }
  },
- "pending_orders": [
-  {
-   "ticker": "TQQQ",
-   "side": "sell",
-   "tag": "quarter_sell",
-   "order_type": "LOC_SELL_UP",
-   "qty": 6.0,
-   "price": 67.74904347826086
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "sell",
-   "tag": "fixed_sell",
-   "order_type": "LIMIT_SELL",
-   "qty": 17.0,
-   "price": 76.75999999999999
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "buy_avg_half",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 66.74782608695652
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "buy_star_half",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 67.739043
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 66.73
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 56.18
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 44.94
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 37.45
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 32.1
-  }
- ],
+ "pending_orders": [],
  "bot_username": "hahamusuko_muhan_bot"
 }
