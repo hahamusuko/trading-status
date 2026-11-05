@@ -3,9 +3,9 @@
  "label": "LS증권",
  "slug": "ls",
  "mode": "실전투자",
- "updated_at": "2026-11-05 18:10:05",
- "updated_at_iso": "2026-11-05T18:10:05.316986+09:00",
- "now_ny": "2026-11-05 04:10:03 EST",
+ "updated_at": "2026-11-05 23:35:04",
+ "updated_at_iso": "2026-11-05T23:35:04.835180+09:00",
+ "now_ny": "2026-11-05 09:35:03 EST",
  "schedule": {
   "last_run_date": "2026-11-05",
   "last_reconcile_date": "2026-11-05",
@@ -20,7 +20,7 @@
   "total_value": 88042.84,
   "unrealized_pl": -2019.39,
   "principal_usage_pct": 13.4,
-  "today_buy_attempt": 2541.2
+  "today_buy_attempt": 3581.83
  },
  "reconciliation": {
   "checked_at": "2026-11-05",
@@ -53,7 +53,7 @@
    "book_value": 11754.67,
    "total_value": 88042.84,
    "cycles": 0,
-   "today_buy_attempt": 2541.2,
+   "today_buy_attempt": 3581.83,
    "buy_halted": false,
    "preview_note": null,
    "phase": "전반전",
@@ -118,10 +118,10 @@
      "side": "buy",
      "tag": "buy_avg_half",
      "order_type": "LOC_BUY",
-     "qty": 13.0,
+     "qty": 15.0,
      "price": 80.5114,
      "label": "평단가 LOC 매수",
-     "amount": 1046.65
+     "amount": 1207.67
     },
     {
      "side": "buy",
@@ -131,24 +131,6 @@
      "price": 91.773,
      "label": "별지점 LOC 매수",
      "amount": 1101.28
-    },
-    {
-     "side": "buy",
-     "tag": "ladder_buy",
-     "order_type": "LOC_BUY",
-     "qty": 1.0,
-     "price": 80.5,
-     "label": "폭락장 대비 추가 매수",
-     "amount": 80.5
-    },
-    {
-     "side": "buy",
-     "tag": "ladder_buy",
-     "order_type": "LOC_BUY",
-     "qty": 1.0,
-     "price": 80.49,
-     "label": "폭락장 대비 추가 매수",
-     "amount": 80.49
     },
     {
      "side": "buy",
@@ -176,6 +158,168 @@
      "price": 74.79,
      "label": "폭락장 대비 추가 매수",
      "amount": 74.79
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 72.37,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 72.37
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 70.11,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 70.11
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 67.99,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 67.99
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 65.99,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 65.99
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 64.1,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 64.1
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 62.32,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 62.32
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 60.64,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 60.64
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 59.04,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 59.04
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 57.53,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 57.53
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 56.09,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 56.09
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 54.72,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 54.72
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 53.42,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 53.42
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 52.18,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 52.18
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 50.99,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 50.99
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 49.86,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 49.86
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 48.77,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 48.77
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 47.73,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 47.73
+    },
+    {
+     "side": "buy",
+     "tag": "ladder_buy",
+     "order_type": "LOC_BUY",
+     "qty": 1.0,
+     "price": 46.74,
+     "label": "폭락장 대비 추가 매수",
+     "amount": 46.74
     }
    ],
    "next_cycle": null
