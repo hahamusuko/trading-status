@@ -3,9 +3,9 @@
  "label": "LS증권",
  "slug": "ls",
  "mode": "실전투자",
- "updated_at": "2026-11-05 18:00:22",
- "updated_at_iso": "2026-11-05T18:00:22.561324+09:00",
- "now_ny": "2026-11-05 04:00:20 EST",
+ "updated_at": "2026-11-05 18:10:05",
+ "updated_at_iso": "2026-11-05T18:10:05.316986+09:00",
+ "now_ny": "2026-11-05 04:10:03 EST",
  "schedule": {
   "last_run_date": "2026-11-05",
   "last_reconcile_date": "2026-11-05",
