@@ -3,9 +3,9 @@
  "label": "키움",
  "slug": "kiwoom",
  "mode": "실전투자",
- "updated_at": "2026-11-05 18:10:05",
- "updated_at_iso": "2026-11-05T18:10:05.317995+09:00",
- "now_ny": "2026-11-05 04:10:03 EST",
+ "updated_at": "2026-11-05 23:35:04",
+ "updated_at_iso": "2026-11-05T23:35:04.893122+09:00",
+ "now_ny": "2026-11-05 09:35:03 EST",
  "schedule": {
   "last_run_date": "2026-11-05",
   "last_reconcile_date": "2026-11-05",
@@ -20,7 +20,7 @@
   "total_value": 4007.42,
   "unrealized_pl": -98.61,
   "principal_usage_pct": 47.5,
-  "today_buy_attempt": 400.7
+  "today_buy_attempt": 299.13
  },
  "reconciliation": {
   "checked_at": "2026-11-05",
@@ -53,7 +53,7 @@
    "book_value": 1903.57,
    "total_value": 4007.42,
    "cycles": 0,
-   "today_buy_attempt": 400.7,
+   "today_buy_attempt": 299.13,
    "buy_halted": false,
    "preview_note": null,
    "phase": "후반전",
@@ -140,33 +140,6 @@
      "price": 46.75,
      "label": "폭락장 대비 추가 매수",
      "amount": 46.75
-    },
-    {
-     "side": "buy",
-     "tag": "ladder_buy",
-     "order_type": "LOC_BUY",
-     "qty": 1.0,
-     "price": 38.96,
-     "label": "폭락장 대비 추가 매수",
-     "amount": 38.96
-    },
-    {
-     "side": "buy",
-     "tag": "ladder_buy",
-     "order_type": "LOC_BUY",
-     "qty": 1.0,
-     "price": 33.39,
-     "label": "폭락장 대비 추가 매수",
-     "amount": 33.39
-    },
-    {
-     "side": "buy",
-     "tag": "ladder_buy",
-     "order_type": "LOC_BUY",
-     "qty": 1.0,
-     "price": 29.22,
-     "label": "폭락장 대비 추가 매수",
-     "amount": 29.22
     }
    ],
    "next_cycle": null
