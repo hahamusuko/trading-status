@@ -3,9 +3,9 @@
  "label": "LS증권",
  "slug": "ls",
  "mode": "실전투자",
- "updated_at": "2026-11-10 18:10:09",
- "updated_at_iso": "2026-11-10T18:10:09.661364+09:00",
- "now_ny": "2026-11-10 04:10:08 EST",
+ "updated_at": "2026-11-10 23:35:08",
+ "updated_at_iso": "2026-11-10T23:35:08.374960+09:00",
+ "now_ny": "2026-11-10 09:35:06 EST",
  "schedule": {
   "last_run_date": "2026-11-10",
   "last_reconcile_date": "2026-11-10",
@@ -20,7 +20,7 @@
   "total_value": 88042.84,
   "unrealized_pl": -2925.89,
   "principal_usage_pct": 18.1,
-  "today_buy_attempt": 3602.35
+  "today_buy_attempt": 3546.37
  },
  "reconciliation": {
   "checked_at": "2026-11-10",
@@ -53,7 +53,7 @@
    "book_value": 15964.29,
    "total_value": 88042.84,
    "cycles": 0,
-   "today_buy_attempt": 3602.35,
+   "today_buy_attempt": 3546.37,
    "buy_halted": false,
    "preview_note": null,
    "phase": "전반전",
@@ -128,9 +128,9 @@
      "tag": "buy_star_half",
      "order_type": "LOC_BUY",
      "qty": 14.0,
-     "price": 77.059,
-     "label": "별지점 LOC 매수",
-     "amount": 1078.83
+     "price": 73.06,
+     "label": "큰수 LOC 매수",
+     "amount": 1022.84
     },
     {
      "side": "buy",
