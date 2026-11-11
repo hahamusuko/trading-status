@@ -3,13 +3,13 @@
  "label": "나무증권",
  "slug": "namu",
  "mode": "실전투자",
- "updated_at": "2026-11-11 06:10:24",
- "updated_at_iso": "2026-11-11T06:10:24.690023+09:00",
- "now_ny": "2026-11-10 16:10:23 EST",
+ "updated_at": "2026-11-11 18:00:24",
+ "updated_at_iso": "2026-11-11T18:00:24.988607+09:00",
+ "now_ny": "2026-11-11 04:00:23 EST",
  "schedule": {
-  "last_run_date": "2026-11-10",
+  "last_run_date": "2026-11-11",
   "last_reconcile_date": "2026-11-11",
-  "next_daily_run": "2026-11-11 18:00:00 KST",
+  "next_daily_run": "2026-11-12 18:00:00 KST",
   "next_reconcile_run": "2026-11-12 06:10:00 KST",
   "next_preview_run": null
  },
@@ -23,10 +23,10 @@
   "today_buy_attempt": 367.03
  },
  "reconciliation": {
-  "checked_at": "2026-11-10",
-  "real_usd_cash": 851.7,
-  "local_total_cash": 854.03,
-  "diff": -2.33,
+  "checked_at": "2026-11-11",
+  "real_usd_cash": 625.26,
+  "local_total_cash": 627.79,
+  "diff": -2.53,
   "rp_mode": null
  },
  "account_snapshot": {
@@ -154,6 +154,55 @@
    "next_cycle": null
   }
  },
- "pending_orders": [],
+ "pending_orders": [
+  {
+   "ticker": "TQQQ",
+   "side": "sell",
+   "tag": "quarter_sell",
+   "order_type": "LOC_SELL_UP",
+   "qty": 13.0,
+   "price": 56.229927728938684
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "sell",
+   "tag": "fixed_sell",
+   "order_type": "LIMIT_SELL",
+   "qty": 40.0,
+   "price": 73.17048587075472
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "buy_star_full",
+   "order_type": "LOC_BUY",
+   "qty": 4.0,
+   "price": 56.219928
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 55.8
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 46.5
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 39.85
+  }
+ ],
  "bot_username": "hahamusuko_muhan_bot"
 }
