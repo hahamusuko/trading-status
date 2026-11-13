@@ -3,13 +3,13 @@
  "label": "키움",
  "slug": "kiwoom",
  "mode": "실전투자",
- "updated_at": "2026-11-13 06:10:18",
- "updated_at_iso": "2026-11-13T06:10:18.888666+09:00",
- "now_ny": "2026-11-12 16:10:17 EST",
+ "updated_at": "2026-11-13 18:00:17",
+ "updated_at_iso": "2026-11-13T18:00:17.206005+09:00",
+ "now_ny": "2026-11-13 04:00:15 EST",
  "schedule": {
-  "last_run_date": "2026-11-12",
+  "last_run_date": "2026-11-13",
   "last_reconcile_date": "2026-11-13",
-  "next_daily_run": "2026-11-13 18:00:00 KST",
+  "next_daily_run": "2026-11-16 18:00:00 KST",
   "next_reconcile_run": "2026-11-14 06:10:00 KST",
   "next_preview_run": null
  },
@@ -23,10 +23,10 @@
   "today_buy_attempt": 278.02
  },
  "reconciliation": {
-  "checked_at": "2026-11-12",
-  "real_usd_cash": 1892.75,
-  "local_total_cash": 1901.27,
-  "diff": -8.52,
+  "checked_at": "2026-11-13",
+  "real_usd_cash": 1712.67,
+  "local_total_cash": 1721.63,
+  "diff": -8.96,
   "rp_mode": null
  },
  "account_snapshot": {
@@ -145,6 +145,47 @@
    "next_cycle": null
   }
  },
- "pending_orders": [],
+ "pending_orders": [
+  {
+   "ticker": "TQQQ",
+   "side": "sell",
+   "tag": "quarter_sell",
+   "order_type": "LOC_SELL_UP",
+   "qty": 9.0,
+   "price": 59.36631875375375
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "sell",
+   "tag": "fixed_sell",
+   "order_type": "LIMIT_SELL",
+   "qty": 28.0,
+   "price": 70.6559033033033
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "buy_star_full",
+   "order_type": "LOC_BUY",
+   "qty": 3.0,
+   "price": 59.356319
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 55.53
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 44.42
+  }
+ ],
  "bot_username": "hahamusuko_muhan_bot"
 }
