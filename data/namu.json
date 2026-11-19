@@ -3,24 +3,24 @@
  "label": "나무증권",
  "slug": "namu",
  "mode": "실전투자",
- "updated_at": "2026-11-19 23:35:08",
- "updated_at_iso": "2026-11-19T23:35:08.314790+09:00",
- "now_ny": "2026-11-19 09:35:07 EST",
+ "updated_at": "2026-11-20 06:10:17",
+ "updated_at_iso": "2026-11-20T06:10:17.343263+09:00",
+ "now_ny": "2026-11-19 16:10:15 EST",
  "schedule": {
   "last_run_date": "2026-11-19",
-  "last_reconcile_date": "2026-11-19",
+  "last_reconcile_date": "2026-11-20",
   "next_daily_run": "2026-11-20 18:00:00 KST",
-  "next_reconcile_run": "2026-11-20 06:10:00 KST",
+  "next_reconcile_run": "2026-11-21 06:10:00 KST",
   "next_preview_run": null
  },
  "totals": {
   "principal": 4000.0,
-  "cash": 431.71,
-  "book_value": 3526.86,
+  "cash": 186.66,
+  "book_value": 3771.91,
   "total_value": 3958.57,
-  "unrealized_pl": -485.34,
-  "principal_usage_pct": 88.2,
-  "today_buy_attempt": 306.65
+  "unrealized_pl": -684.28,
+  "principal_usage_pct": 94.3,
+  "today_buy_attempt": 0.0
  },
  "reconciliation": {
   "checked_at": "2026-11-19",
@@ -32,39 +32,38 @@
  "account_snapshot": {
   "monthly_pl_usd": 0.0,
   "yearly_pl_usd": 0.0,
-  "usd_krw_rate": 1338.8,
-  "snapshot_at": "2026-11-19"
+  "usd_krw_rate": 1331.1,
+  "snapshot_at": "2026-11-20"
  },
  "tickers": {
   "TQQQ": {
    "version": "v4.0",
    "target_profit_pct": 15.0,
    "division": 20,
-   "mode": "general",
-   "T": 18.3125,
-   "qty": 58.0,
-   "avg_price": 60.807937553676,
-   "last_close": 52.44,
-   "unrealized_pl": -485.34,
-   "unrealized_pl_pct": -13.76,
-   "cash": 431.71,
+   "mode": "exhausted",
+   "T": 19.3125,
+   "qty": 63.0,
+   "avg_price": 59.87159330338425,
+   "last_close": 49.01,
+   "unrealized_pl": -684.28,
+   "unrealized_pl_pct": -18.14,
+   "cash": 186.66,
    "principal": 4000.0,
    "initial_principal": 4000.0,
-   "book_value": 3526.86,
+   "book_value": 3771.91,
    "total_value": 3958.57,
    "cycles": 0,
-   "today_buy_attempt": 306.65,
+   "today_buy_attempt": 0,
    "buy_halted": false,
    "preview_note": null,
-   "phase": "후반전",
-   "star_pct": -12.469,
-   "star_point": 53.2259,
-   "fixed_sell_price": 69.9291,
-   "one_buy_amount": 255.83,
-   "progress_pct": 88.2,
-   "eval_value": 3041.52,
+   "phase": "리버스모드",
+   "star_pct": null,
+   "star_point": 52.794,
+   "fixed_sell_price": 68.8523,
+   "one_buy_amount": 46.66,
+   "progress_pct": 94.3,
+   "eval_value": 3087.63,
    "recent_closes": [
-    80.23,
     81.28,
     79.61,
     78.81,
@@ -93,99 +92,23 @@
     57.68,
     53.03,
     51.81,
-    52.44
+    52.44,
+    49.01
    ],
    "orders": [
     {
      "side": "sell",
-     "tag": "quarter_sell",
-     "order_type": "LOC_SELL_UP",
-     "qty": 15.0,
-     "price": 53.2259,
+     "tag": "reverse_first_moc",
+     "order_type": "MOC_SELL",
+     "qty": 6.0,
+     "price": 0.0,
      "label": "LOC/MOC 매도",
-     "amount": 798.39
-    },
-    {
-     "side": "sell",
-     "tag": "fixed_sell",
-     "order_type": "LIMIT_SELL",
-     "qty": 43.0,
-     "price": 69.9291,
-     "label": "지정가 매도",
-     "amount": 3006.95
-    },
-    {
-     "side": "buy",
-     "tag": "buy_star_full",
-     "order_type": "LOC_BUY",
-     "qty": 4.0,
-     "price": 53.2159,
-     "label": "별지점 LOC 매수",
-     "amount": 212.86
-    },
-    {
-     "side": "buy",
-     "tag": "ladder_buy",
-     "order_type": "LOC_BUY",
-     "qty": 1.0,
-     "price": 51.16,
-     "label": "폭락장 대비 추가 매수",
-     "amount": 51.16
-    },
-    {
-     "side": "buy",
-     "tag": "ladder_buy",
-     "order_type": "LOC_BUY",
-     "qty": 1.0,
-     "price": 42.63,
-     "label": "폭락장 대비 추가 매수",
-     "amount": 42.63
+     "amount": null
     }
    ],
    "next_cycle": null
   }
  },
- "pending_orders": [
-  {
-   "ticker": "TQQQ",
-   "side": "sell",
-   "tag": "quarter_sell",
-   "order_type": "LOC_SELL_UP",
-   "qty": 15.0,
-   "price": 53.22594783995202
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "sell",
-   "tag": "fixed_sell",
-   "order_type": "LIMIT_SELL",
-   "qty": 43.0,
-   "price": 69.9291281867274
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "buy_star_full",
-   "order_type": "LOC_BUY",
-   "qty": 4.0,
-   "price": 53.215948
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 51.16
-  },
-  {
-   "ticker": "TQQQ",
-   "side": "buy",
-   "tag": "ladder_buy",
-   "order_type": "LOC_BUY",
-   "qty": 1.0,
-   "price": 42.63
-  }
- ],
+ "pending_orders": [],
  "bot_username": "hahamusuko_muhan_bot"
 }
