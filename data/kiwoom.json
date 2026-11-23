@@ -3,13 +3,13 @@
  "label": "키움",
  "slug": "kiwoom",
  "mode": "실전투자",
- "updated_at": "2026-11-21 06:10:36",
- "updated_at_iso": "2026-11-21T06:10:36.592043+09:00",
- "now_ny": "2026-11-20 16:10:25 EST",
+ "updated_at": "2026-11-23 18:00:27",
+ "updated_at_iso": "2026-11-23T18:00:27.491794+09:00",
+ "now_ny": "2026-11-23 04:00:18 EST",
  "schedule": {
-  "last_run_date": "2026-11-20",
+  "last_run_date": "2026-11-23",
   "last_reconcile_date": "2026-11-21",
-  "next_daily_run": "2026-11-23 18:00:00 KST",
+  "next_daily_run": "2026-11-24 18:00:00 KST",
   "next_reconcile_run": "2026-11-24 06:10:00 KST",
   "next_preview_run": null
  },
@@ -23,10 +23,10 @@
   "today_buy_attempt": 382.93
  },
  "reconciliation": {
-  "checked_at": "2026-11-20",
-  "real_usd_cash": 662.86,
-  "local_total_cash": 674.42,
-  "diff": -11.56,
+  "checked_at": "2026-11-23",
+  "real_usd_cash": 456.35,
+  "local_total_cash": 468.42,
+  "diff": -12.07,
   "rp_mode": null
  },
  "account_snapshot": {
@@ -163,6 +163,63 @@
    "next_cycle": null
   }
  },
- "pending_orders": [],
- "bot_username": null
+ "pending_orders": [
+  {
+   "ticker": "TQQQ",
+   "side": "sell",
+   "tag": "quarter_sell",
+   "order_type": "LOC_SELL_UP",
+   "qty": 16.0,
+   "price": 49.84006671594983
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "sell",
+   "tag": "fixed_sell",
+   "order_type": "LIMIT_SELL",
+   "qty": 46.0,
+   "price": 65.41064390681004
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "buy_star_full",
+   "order_type": "LOC_BUY",
+   "qty": 5.0,
+   "price": 47.38
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 44.61
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 38.23
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 33.45
+  },
+  {
+   "ticker": "TQQQ",
+   "side": "buy",
+   "tag": "ladder_buy",
+   "order_type": "LOC_BUY",
+   "qty": 1.0,
+   "price": 29.74
+  }
+ ],
+ "bot_username": "hahamusuko_muhan_bot"
 }
