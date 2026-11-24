@@ -3,9 +3,9 @@
  "label": "키움",
  "slug": "kiwoom",
  "mode": "실전투자",
- "updated_at": "2026-11-24 18:10:07",
- "updated_at_iso": "2026-11-24T18:10:07.534721+09:00",
- "now_ny": "2026-11-24 04:10:06 EST",
+ "updated_at": "2026-11-24 23:35:06",
+ "updated_at_iso": "2026-11-24T23:35:06.957980+09:00",
+ "now_ny": "2026-11-24 09:35:05 EST",
  "schedule": {
   "last_run_date": "2026-11-24",
   "last_reconcile_date": "2026-11-24",
@@ -187,5 +187,6 @@
    "price": 38.23
   }
  ],
- "bot_username": "hahamusuko_muhan_bot"
+ "bot_username": "hahamusuko_muhan_bot",
+ "tax": null
 }
