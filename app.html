@@ -330,6 +330,37 @@ function txSend(op, id) {
   setTimeout(load, 1500);
 }
 function txStartEdit(id) { txEdit = id; load(); }
+// 절세 계산 (추천 아님): 고른 보유분을 N주 팔아 손실을 확정하면 세액이 얼마가 되는지
+const DEDUCT = 2500000;
+function taxOf(total) { const tb = Math.max(total - DEDUCT, 0); const n = Math.floor(tb * 0.2 / 10) * 10; return n + Math.floor(n * 0.1 / 10) * 10; }
+let hvTotal = 0, hvRows = [];
+function hvCalc() {
+  const box = document.getElementById('hv-calc');
+  if (!box || !box.querySelector('.hs')) return;
+  const r = hvRows[parseInt(box.querySelector('.hs').value, 10)];
+  const q = Math.max(0, Math.min(parseInt(box.querySelector('.hq').value, 10) || 0, r ? r.qty : 0));
+  const loss = r ? Math.round(q * r.loss_per_share_krw) : 0;
+  box.querySelector('.hr').innerHTML = r ? `확정 손실 약 <b>${won(loss)}</b> → 합계 ${won(hvTotal + loss)} → 예상 세액 <b>${won(taxOf(hvTotal + loss))}</b>` : '-';
+}
+function harvestCard(t) {
+  const h = t.harvest;
+  if (!h) return '';
+  hvTotal = num(t.total_krw) || 0; hvRows = h.holdings || [];
+  const urgent = h.days_left <= 7 ? 'b-bad' : (h.days_left <= 21 ? 'b-warn' : 'b-chip');
+  const rows = hvRows.length ? `<div class="scroll"><table><thead><tr><th>계좌·종목</th><th></th><th>평가손익</th><th>주당</th><th>상쇄 주수</th></tr></thead><tbody>${hvRows.map(r => `<tr>
+      <td>${esc(r.account)} <b>${esc(r.ticker)}</b><br><span class="note">${esc(r.qty)}주${r.program ? ' · <span class="badge b-warn">프로그램 운용</span>' : ''}</span></td><td></td>
+      <td class="down">${won(r.unreal_krw)}</td><td>${won(r.loss_per_share_krw)}</td>
+      <td>${h.need_krw ? (r.shares_to_offset >= r.qty && -r.unreal_krw < h.need_krw ? `전부(${esc(r.qty)}) <span class="note">부족</span>` : `${esc(r.shares_to_offset)}주`) : '-'}</td></tr>`).join('')}</tbody></table></div>`
+    : '<div class="note">평가손실이 난 보유 종목이 없습니다.</div>';
+  return `<div class="card nc" style="margin-top:12px" id="hv-calc"><h3>💡 절세 계산 <span class="badge ${urgent}">결제 마감 뉴욕 ${esc(h.deadline_ny)} · ${esc(h.days_left)}일 남음</span></h3>
+    <dl class="kv"><dt>세금 0원까지 상쇄할 손실</dt><dd><b>${won(h.need_krw)}</b></dd><dt>지금 평가손실 합계</dt><dd class="down">${won(-h.loss_available_krw)}</dd></dl>
+    ${rows}
+    <div class="note">'상쇄 주수'는 그 종목 하나로 ${won(h.need_krw)}을 채울 때 필요한 주수입니다. 위쪽이 프로그램 밖 보유분입니다.</div>
+    ${hvRows.length ? `<label>계산해 보기</label><select class="hs" onchange="hvCalc()">${hvRows.map((r, i) => `<option value="${i}">${esc(r.account)} ${esc(r.ticker)} (${esc(r.qty)}주)</option>`).join('')}</select>
+    <label>매도 주수</label><input class="hq" type="number" inputmode="numeric" min="0" value="${esc(hvRows[0].shares_to_offset || 0)}" oninput="hvCalc()">
+    <div style="margin-top:8px;font-size:13px"><span class="hr"></span></div>` : ''}
+    <ul class="note" style="padding-left:18px;margin:10px 0 0">${(h.notes || []).map(n => `<li>${esc(n)}</li>`).join('')}</ul></div>`;
+}
 function taxSection(t, bot) {
   txBot = bot || '';
   const accts = t.accounts || [], manual = t.manual || [];
@@ -362,6 +393,7 @@ function taxSection(t, bot) {
         ${ed ? `<button class="sub2" onclick="txEdit=null;load()">취소</button>` : ''}
         <div class="note">누르면 텔레그램이 열려요. <b>시작(START)</b>을 누르면 30분 안에 반영되고 텔레그램으로 알려 드립니다.</div></div>
     </div>
+    ${harvestCard(t)}
     <div class="card" style="margin-top:12px"><h3>계산 기준</h3><ul class="note" style="padding-left:18px;margin:0">${(t.basis || []).map(b => `<li>${esc(b)}</li>`).join('')}
       <li>예상치입니다. 실제 신고는 증권사 양도소득세 신고 자료(또는 신고 대행)로 확인하세요.</li></ul></div>
   </section>`;
@@ -448,6 +480,7 @@ async function load() {
       ? accounts.map(a => a.error ? `<section class="account" data-slug="${esc(a.slug)}"><h2>[${esc(a.label)}]</h2><div class="alert bad">데이터를 불러오지 못했습니다: ${esc(a.error)}</div></section>` : accountSection(a)).join('')
         + (taxOwner ? taxSection(taxOwner.tax, taxOwner.bot_username) : '')
       : '<div class="empty">아직 올라온 계좌 데이터가 없습니다.</div>';
+    hvCalc();
     // 자동 새로고침 때는 보던 위치 유지(입력 중 맨 위로 튀지 않게), 처음이나 탭이 사라졌을 때만 맨 위로
     if (accounts.length) { const keep = accounts.some(a => a.slug === current) || (taxOwner && current === '__tax');
       showTab(keep ? current : accounts[0].slug, false); window.scrollTo(0, keep ? y0 : 0); }

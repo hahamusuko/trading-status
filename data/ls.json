@@ -3,14 +3,14 @@
  "label": "LS증권",
  "slug": "ls",
  "mode": "실전투자",
- "updated_at": "2026-11-24 22:20:59",
- "updated_at_iso": "2026-11-24T22:20:59.522631+09:00",
- "now_ny": "2026-11-24 08:20:58 EST",
+ "updated_at": "2026-11-24 22:38:51",
+ "updated_at_iso": "2026-11-24T22:38:51.892650+09:00",
+ "now_ny": "2026-11-24 08:38:50 EST",
  "schedule": {
   "last_run_date": "2026-11-24",
   "last_reconcile_date": "2026-11-24",
-  "next_daily_run": null,
-  "next_reconcile_run": null,
+  "next_daily_run": "2026-11-25 18:00:00 KST",
+  "next_reconcile_run": "2026-11-25 06:10:00 KST",
   "next_preview_run": null
  },
  "totals": {
@@ -734,7 +734,7 @@
  "bot_username": "hahamusuko_muhan_bot",
  "tax": {
   "year": 2026,
-  "updated_at": "2026-11-24 22:20",
+  "updated_at": "2026-11-24 22:38",
   "accounts": [
    {
     "label": "LS증권",
@@ -742,7 +742,7 @@
     "n_sells": 0,
     "source": "매매일지 + 결제일 환율(ECB)",
     "method": "이동평균법 추정",
-    "as_of": "2026-11-24 22:20",
+    "as_of": "2026-11-24 22:38",
     "ok": true,
     "stale": false,
     "note": "프로그램이 낸 주문만 포함"
@@ -753,7 +753,7 @@
     "n_sells": 8,
     "source": "키움 API (원화 실현손익)",
     "method": "증권사 계산 (계좌 전체)",
-    "as_of": "2026-11-24 22:20",
+    "as_of": "2026-11-24 22:38",
     "ok": true,
     "stale": false,
     "note": ""
@@ -764,7 +764,7 @@
     "n_sells": 3,
     "source": "매매일지 + 결제일 환율(ECB)",
     "method": "이동평균법 추정",
-    "as_of": "2026-11-24 22:20",
+    "as_of": "2026-11-24 22:38",
     "ok": true,
     "stale": false,
     "note": "프로그램이 낸 주문만 포함"
@@ -775,7 +775,7 @@
     "n_sells": 67,
     "source": "메리츠 API (원화 실현손익)",
     "method": "증권사 계산",
-    "as_of": "2026-11-24 22:20",
+    "as_of": "2026-11-24 22:38",
     "ok": true,
     "stale": false,
     "note": ""
@@ -783,6 +783,105 @@
   ],
   "manual": [],
   "missing": [],
+  "harvest": {
+   "need_krw": 18369423,
+   "deadline_ny": "2026-12-30",
+   "days_left": 36,
+   "holdings": [
+    {
+     "ticker": "SOXL",
+     "qty": 616,
+     "avg_usd": 76.2585,
+     "price_usd": 36.97,
+     "unreal_krw": -32590103,
+     "loss_per_share_krw": -52906,
+     "program": false,
+     "basis": "달러 평가손익 × 현재 환율(매수 때 환율 차이는 빠짐)",
+     "account": "메리츠증권",
+     "shares_to_offset": 348,
+     "offset_krw": 18411288,
+     "tax_if_all": 0
+    },
+    {
+     "ticker": "TQQQ",
+     "qty": 388,
+     "avg_usd": 63.8304,
+     "price_usd": 45.96,
+     "unreal_krw": -9336961,
+     "loss_per_share_krw": -24064,
+     "program": false,
+     "basis": "달러 평가손익 × 현재 환율(매수 때 환율 차이는 빠짐)",
+     "account": "메리츠증권",
+     "shares_to_offset": 388,
+     "offset_krw": 9336832,
+     "tax_if_all": 1987130
+    },
+    {
+     "ticker": "CONL",
+     "qty": 578,
+     "avg_usd": 9.8345,
+     "price_usd": 1.6673,
+     "unreal_krw": -6363155,
+     "loss_per_share_krw": -11009,
+     "program": false,
+     "basis": "키움 잔고 원화 평가손익",
+     "account": "키움증권",
+     "shares_to_offset": 578,
+     "offset_krw": 6363155,
+     "tax_if_all": 2641370
+    },
+    {
+     "ticker": "SOXL",
+     "qty": 634,
+     "avg_usd": 55.1402,
+     "price_usd": 43.21,
+     "unreal_krw": -10202333,
+     "loss_per_share_krw": -16092,
+     "program": true,
+     "basis": "매매일지 원화 취득가(이동평균) vs 최근 종가 × 최근 환율",
+     "account": "LS증권",
+     "shares_to_offset": 634,
+     "offset_krw": 10202328,
+     "tax_if_all": 1796750
+    },
+    {
+     "ticker": "TQQQ",
+     "qty": 62,
+     "avg_usd": 56.8788,
+     "price_usd": 45.93,
+     "unreal_krw": -933197,
+     "loss_per_share_krw": -15052,
+     "program": true,
+     "basis": "키움 잔고 원화 평가손익",
+     "account": "키움증권",
+     "shares_to_offset": 62,
+     "offset_krw": 933197,
+     "tax_if_all": 3835960
+    },
+    {
+     "ticker": "TQQQ",
+     "qty": 57,
+     "avg_usd": 59.3849,
+     "price_usd": 49.1,
+     "unreal_krw": -790747,
+     "loss_per_share_krw": -13873,
+     "program": true,
+     "basis": "매매일지 원화 취득가(이동평균) vs 최근 종가 × 최근 환율",
+     "account": "나무증권",
+     "shares_to_offset": 57,
+     "offset_krw": 790747,
+     "tax_if_all": 3867300
+    }
+   ],
+   "loss_available_krw": 60216496,
+   "notes": [
+    "추천이 아니라 계산입니다 — 매도 여부는 직접 판단하고, 신고 전 증권사·세무사에게 확인하세요",
+    "올해 손실로 잡히려면 뉴욕 12/30 장까지 체결(결제일 기준, 증권사 마감 안내 확인)",
+    "우리나라는 팔고 바로 다시 사는 것(재매수)을 막는 규정이 없어 보유를 유지하며 손실만 확정하는 방법이 흔히 쓰임 — 수수료·호가 차이 비용 있음",
+    "프로그램 운용 종목을 직접 사고팔면 프로그램 장부와 어긋남 — 하려면 미리 알려 주세요(상태 보정 필요)",
+    "평가손익은 조회 시점 가격·환율 기준 추정이라 실제 매도 손익과 다를 수 있음"
+   ]
+  },
   "total_krw": 20869423,
   "deduction": 2500000,
   "taxable": 18369423,
