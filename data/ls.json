@@ -3,14 +3,14 @@
  "label": "LS증권",
  "slug": "ls",
  "mode": "실전투자",
- "updated_at": "2026-11-24 18:10:08",
- "updated_at_iso": "2026-11-24T18:10:08.426691+09:00",
- "now_ny": "2026-11-24 04:10:07 EST",
+ "updated_at": "2026-11-24 22:20:59",
+ "updated_at_iso": "2026-11-24T22:20:59.522631+09:00",
+ "now_ny": "2026-11-24 08:20:58 EST",
  "schedule": {
   "last_run_date": "2026-11-24",
   "last_reconcile_date": "2026-11-24",
-  "next_daily_run": "2026-11-25 18:00:00 KST",
-  "next_reconcile_run": "2026-11-25 06:10:00 KST",
+  "next_daily_run": null,
+  "next_reconcile_run": null,
   "next_preview_run": null
  },
  "totals": {
@@ -731,5 +731,70 @@
    "price": 30.59
   }
  ],
- "bot_username": "hahamusuko_muhan_bot"
+ "bot_username": "hahamusuko_muhan_bot",
+ "tax": {
+  "year": 2026,
+  "updated_at": "2026-11-24 22:20",
+  "accounts": [
+   {
+    "label": "LS증권",
+    "realized_krw": 0,
+    "n_sells": 0,
+    "source": "매매일지 + 결제일 환율(ECB)",
+    "method": "이동평균법 추정",
+    "as_of": "2026-11-24 22:20",
+    "ok": true,
+    "stale": false,
+    "note": "프로그램이 낸 주문만 포함"
+   },
+   {
+    "label": "키움증권",
+    "realized_krw": -660970,
+    "n_sells": 8,
+    "source": "키움 API (원화 실현손익)",
+    "method": "증권사 계산 (계좌 전체)",
+    "as_of": "2026-11-24 22:20",
+    "ok": true,
+    "stale": false,
+    "note": ""
+   },
+   {
+    "label": "나무증권",
+    "realized_krw": -203744,
+    "n_sells": 3,
+    "source": "매매일지 + 결제일 환율(ECB)",
+    "method": "이동평균법 추정",
+    "as_of": "2026-11-24 22:20",
+    "ok": true,
+    "stale": false,
+    "note": "프로그램이 낸 주문만 포함"
+   },
+   {
+    "label": "메리츠증권",
+    "realized_krw": 21734137,
+    "n_sells": 67,
+    "source": "메리츠 API (원화 실현손익)",
+    "method": "증권사 계산",
+    "as_of": "2026-11-24 22:20",
+    "ok": true,
+    "stale": false,
+    "note": ""
+   }
+  ],
+  "manual": [],
+  "missing": [],
+  "total_krw": 20869423,
+  "deduction": 2500000,
+  "taxable": 18369423,
+  "tax_national": 3673880,
+  "tax_local": 367380,
+  "tax": 4041260,
+  "deduction_left": 0,
+  "basis": [
+   "1~12월 모든 증권사 양도차익 합산(손실은 이익에서 차감, 이월 없음)",
+   "기본공제 2,500,000원 후 22%(양도소득세 20% + 지방소득세 2%)",
+   "12월 마지막 거래일 무렵 매도는 결제일 기준으로 다음 해에 들어갈 수 있음",
+   "나무·LS는 결제일 ECB 환율과 이동평균법으로 추정 — 증권사 양도세 신고 자료와 다를 수 있음"
+  ]
+ }
 }
