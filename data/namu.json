@@ -3,13 +3,13 @@
  "label": "나무증권",
  "slug": "namu",
  "mode": "실전투자",
- "updated_at": "2026-11-26 06:10:15",
- "updated_at_iso": "2026-11-26T06:10:15.579995+09:00",
- "now_ny": "2026-11-25 16:10:14 EST",
+ "updated_at": "2026-11-26 18:00:30",
+ "updated_at_iso": "2026-11-26T18:00:30.701388+09:00",
+ "now_ny": "2026-11-26 04:00:28 EST",
  "schedule": {
   "last_run_date": "2026-11-25",
   "last_reconcile_date": "2026-11-26",
-  "next_daily_run": "2026-11-26 18:00:00 KST",
+  "next_daily_run": "2026-11-27 18:00:00 KST",
   "next_reconcile_run": "2026-11-27 06:10:00 KST",
   "next_preview_run": null
  },
@@ -23,10 +23,10 @@
   "today_buy_attempt": 83.17
  },
  "reconciliation": {
-  "checked_at": "2026-11-25",
-  "real_usd_cash": 336.8,
-  "local_total_cash": 341.48,
-  "diff": -4.68,
+  "checked_at": "2026-11-26",
+  "real_usd_cash": 291.48,
+  "local_total_cash": 296.2,
+  "diff": -4.72,
   "rp_mode": null
  },
  "account_snapshot": {
