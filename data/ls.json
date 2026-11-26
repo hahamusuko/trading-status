@@ -3,13 +3,13 @@
  "label": "LS증권",
  "slug": "ls",
  "mode": "실전투자",
- "updated_at": "2026-11-26 07:15:18",
- "updated_at_iso": "2026-11-26T07:15:18.669289+09:00",
- "now_ny": "2026-11-25 17:15:17 EST",
+ "updated_at": "2026-11-26 18:00:23",
+ "updated_at_iso": "2026-11-26T18:00:23.483269+09:00",
+ "now_ny": "2026-11-26 04:00:20 EST",
  "schedule": {
   "last_run_date": "2026-11-25",
   "last_reconcile_date": "2026-11-26",
-  "next_daily_run": "2026-11-26 18:00:00 KST",
+  "next_daily_run": "2026-11-27 18:00:00 KST",
   "next_reconcile_run": "2026-11-27 06:10:00 KST",
   "next_preview_run": null
  },
@@ -23,10 +23,10 @@
   "today_buy_attempt": 3656.05
  },
  "reconciliation": {
-  "checked_at": "2026-11-25",
-  "real_usd_cash": 47455.06,
-  "local_total_cash": 49817.56,
-  "diff": -2362.5,
+  "checked_at": "2026-11-26",
+  "real_usd_cash": 45329.63,
+  "local_total_cash": 47576.16,
+  "diff": -2246.53,
   "rp_mode": true
  },
  "account_snapshot": {
