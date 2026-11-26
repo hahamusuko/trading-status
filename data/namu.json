@@ -3,14 +3,14 @@
  "label": "나무증권",
  "slug": "namu",
  "mode": "실전투자",
- "updated_at": "2026-11-26 23:35:11",
- "updated_at_iso": "2026-11-26T23:35:11.893522+09:00",
- "now_ny": "2026-11-26 09:35:10 EST",
+ "updated_at": "2026-11-27 06:10:07",
+ "updated_at_iso": "2026-11-27T06:10:07.218244+09:00",
+ "now_ny": "2026-11-26 16:10:05 EST",
  "schedule": {
   "last_run_date": "2026-11-25",
-  "last_reconcile_date": "2026-11-26",
+  "last_reconcile_date": "2026-11-27",
   "next_daily_run": "2026-11-27 18:00:00 KST",
-  "next_reconcile_run": "2026-11-27 06:10:00 KST",
+  "next_reconcile_run": "2026-11-28 06:10:00 KST",
   "next_preview_run": null
  },
  "totals": {
@@ -32,8 +32,8 @@
  "account_snapshot": {
   "monthly_pl_usd": 0.0,
   "yearly_pl_usd": 0.0,
-  "usd_krw_rate": 1343.6,
-  "snapshot_at": "2026-11-26"
+  "usd_krw_rate": 1343.9,
+  "snapshot_at": "2026-11-27"
  },
  "tickers": {
   "TQQQ": {
